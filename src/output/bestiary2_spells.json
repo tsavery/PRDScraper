@@ -1,0 +1,1002 @@
+[
+    {
+        "name": "Pleroma\t", 
+        "type": "Cleric", 
+        "concentration": 30, 
+        "spells": {
+            "3rd": [
+                "clairaudience/clairvoyance", 
+                "magic circle against chaos", 
+                "magic circle against evil", 
+                "magic circle against good", 
+                "magic circle against law", 
+                "suggestion (DC 23)"
+            ], 
+            "6th": [
+                "banishment (DC 26)", 
+                "forbiddance (DC 26)", 
+                "geas", 
+                "legend lore", 
+                "repulsion (DC 26)", 
+                "veil (DC 26)"
+            ], 
+            "5th": [
+                "contact other plane", 
+                "dispel chaos (DC 25)", 
+                "dispel evil (DC 25)", 
+                "dispel good (DC 25)", 
+                "dispel law (DC 25)", 
+                "teleport"
+            ], 
+            "2nd": [
+                "align weapon", 
+                "detect thoughts (DC 22)", 
+                "enthrall (DC 22)", 
+                "make whole", 
+                "see invisibility", 
+                "undetectable alignment", 
+                "zone of truth (DC 22)"
+            ], 
+            "0": [
+                "create water", 
+                "detect magic", 
+                "guidance", 
+                "read magic"
+            ], 
+            "4th": [
+                "chaos hammer (DC 24)", 
+                "holy smite (DC 24)", 
+                "order's wrath (DC 24)", 
+                "restoration", 
+                "scrying (DC 24)", 
+                "unholy blight (DC 24)"
+            ], 
+            "9th": [
+                "astral projection", 
+                "gate", 
+                "implosion (3, DC 29)"
+            ], 
+            "1st": [
+                "detect chaos", 
+                "detect evil", 
+                "detect good", 
+                "detect law", 
+                "identify", 
+                "magic aura", 
+                "true strike"
+            ], 
+            "7th": [
+                "blasphemy (DC 27)", 
+                "destruction (DC 27)", 
+                "dictum (DC 27)", 
+                "holy word (DC 27)", 
+                "word of chaos (DC 27)"
+            ], 
+            "8th": [
+                "cloak of chaos (DC 28)", 
+                "holy aura (DC 28)", 
+                "shield of law (DC 28)", 
+                "summon monster VIII", 
+                "unholy aura (DC 28)"
+            ]
+        }, 
+        "caster_level": 20
+    }, 
+    {
+        "name": "Draconal\t", 
+        "type": "Cleric", 
+        "domains": [
+            "Good", 
+            "Nobility"
+        ], 
+        "concentration": 23, 
+        "spells": {
+            "3rd": [
+                "bestow curse (DC 20)", 
+                "daylight", 
+                "dispel magic", 
+                "helping hand", 
+                "magic vestmentD", 
+                "prayer", 
+                "protection from energy"
+            ], 
+            "6th": [
+                "animate objects", 
+                "blade barrierD (DC 23)", 
+                "find the path", 
+                "heal", 
+                "heroes' feast", 
+                "quickened remove paralysis"
+            ], 
+            "5th": [
+                "breath of life", 
+                "dispel evilD", 
+                "flame strike (DC 22)", 
+                "greater command (DC 22)", 
+                "spell resistance", 
+                "true seeing"
+            ], 
+            "2nd": [
+                "align weaponD (good only)", 
+                "calm emotions (DC 19)", 
+                "enthrall", 
+                "hold person (DC 19)", 
+                "lesser restoration (2)", 
+                "shield other"
+            ], 
+            "0": [
+                "detect poison", 
+                "guidance", 
+                "purify food and drink", 
+                "stabilize"
+            ], 
+            "4th": [
+                "cure critical wounds (3)", 
+                "freedom of movement", 
+                "holy smiteD (DC 21)", 
+                "repel vermin (DC 21)"
+            ], 
+            "9th": [
+                "implosion (DC 26)", 
+                "storm of vengeanceD (DC 26)"
+            ], 
+            "1st": [
+                "bless", 
+                "detect undead", 
+                "divine favorD", 
+                "obscuring mist", 
+                "remove fear", 
+                "sanctuary (DC 18)", 
+                "shield of faith"
+            ], 
+            "7th": [
+                "empowered breath of life", 
+                "empowered flame strike (DC 22)", 
+                "holy word (DC 24)", 
+                "quickened invisibility purge", 
+                "repulsionD (DC 24)"
+            ], 
+            "8th": [
+                "demandD", 
+                "earthquake", 
+                "quickened holy smite (DC 21)"
+            ]
+        }, 
+        "caster_level": 17
+    }, 
+    {
+        "name": "Aranea\t", 
+        "type": "Sorcerer", 
+        "concentration": 8, 
+        "spells": {
+            "0 (at will)": [
+                "daze (DC 13)", 
+                "detect magic", 
+                "ghost sound (DC 13)", 
+                "light", 
+                "mage hand", 
+                "resistance"
+            ], 
+            "1st (7/day)": [
+                "charm person (DC 14)", 
+                "mage armor (1 already cast)", 
+                "silent image (DC 14)", 
+                "sleep (DC 14)"
+            ], 
+            "2nd (5/day)": [
+                "invisibility", 
+                "mirror image"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Star Archon", 
+        "type": "Cleric", 
+        "concentration": 26, 
+        "spells": {
+            "3rd": [
+                "cure serious wounds (3)", 
+                "dispel magic(2)", 
+                "invisibility purge"
+            ], 
+            "6th": [
+                "greater dispel magic", 
+                "heal", 
+                "mass cure moderate wounds (3)"
+            ], 
+            "5th": [
+                "break enchantment (2)", 
+                "breath of life (2)", 
+                "flame strike (DC 22)"
+            ], 
+            "2nd": [
+                "cure moderate wounds (4)", 
+                "eagle's splendor", 
+                "status"
+            ], 
+            "0": [
+                "guidance", 
+                "resistance", 
+                "stabilize", 
+                "virtue"
+            ], 
+            "4th": [
+                "cure critical wounds (3)", 
+                "death ward", 
+                "divine power"
+            ], 
+            "9th": [
+                "implosion (DC 26)", 
+                "mass heal", 
+                "miracle"
+            ], 
+            "1st": [
+                "cure light wounds (4)", 
+                "divine favor", 
+                "sanctuary (DC 18)"
+            ], 
+            "7th": [
+                "destruction (2, DC 24)", 
+                "holy word (2, DC 24)", 
+                "resurrection"
+            ], 
+            "8th": [
+                "dimensional lock", 
+                "fire storm (DC 25)", 
+                "holy aura (DC 25)"
+            ]
+        }, 
+        "caster_level": 19
+    }, 
+    {
+        "name": "Young Brine Dragon", 
+        "concentration": 2, 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "mage hand", 
+                "open/close", 
+                "prestidigitation"
+            ], 
+            "1st (4/day)": [
+                "color spray (DC 12)", 
+                "touch of the sea"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Brine Dragon", 
+        "concentration": 10, 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "detect poison", 
+                "mage hand", 
+                "open/close", 
+                "prestidigitation", 
+                "read magic", 
+                "resistance"
+            ], 
+            "2nd (7/day)": [
+                "alter self", 
+                "invisibility", 
+                "slipstream"
+            ], 
+            "1st (7/day)": [
+                "color spray (DC 14)", 
+                "feather fall", 
+                "flare burst (DC 14)", 
+                "ray of enfeeblement (DC 14)", 
+                "touch of the sea"
+            ], 
+            "3rd (5/day)": [
+                "aqueous orb (DC 16)", 
+                "sleet storm (DC 16)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Brine Dragon", 
+        "concentration": 20, 
+        "spells": {
+            "6th (6/day)": [
+                "fluid form", 
+                "true seeing", 
+                "transformation"
+            ], 
+            "0 (at will)": [
+                "arcane mark", 
+                "detect magic", 
+                "detect poison", 
+                "mage hand", 
+                "message", 
+                "open/close", 
+                "prestidigitation", 
+                "read magic", 
+                "resistance"
+            ], 
+            "5th (7/day)": [
+                "break enchantment", 
+                "dismissal", 
+                "teleport", 
+                "wall of force"
+            ], 
+            "3rd (7/day)": [
+                "aqueous orb (DC 18)", 
+                "deep slumber (DC 18)", 
+                "dispel magic", 
+                "sleet storm (DC 18)"
+            ], 
+            "4th (7/day)": [
+                "ball lightning (DC 19)", 
+                "ice storm", 
+                "greater invisibility", 
+                "solid fog"
+            ], 
+            "7th (4/day)": [
+                "control weather", 
+                "mass fly"
+            ], 
+            "2nd (7/day)": [
+                "alter self", 
+                "detect thoughts (DC 17)", 
+                "invisibility", 
+                "make whole", 
+                "slipstream"
+            ], 
+            "1st (8/day)": [
+                "color spray (DC 16)", 
+                "feather fall", 
+                "flare burst (DC 16)", 
+                "ray of enfeeblement", 
+                "touch of the sea"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Cloud Dragon", 
+        "concentration": 9, 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect poison", 
+                "light", 
+                "message", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "1st (7/day)": [
+                "charm person (DC 15)", 
+                "detect secret doors", 
+                "shield", 
+                "true strike"
+            ], 
+            "2nd (5/day)": [
+                "blur", 
+                "see invisibility"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Adult Cloud Dragon", 
+        "concentration": 9, 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect poison", 
+                "light", 
+                "message", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "1st (7/day)": [
+                "charm person (DC 15)", 
+                "detect secret doors", 
+                "shield", 
+                "true strike"
+            ], 
+            "2nd (5/day)": [
+                "blur", 
+                "see invisibility"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Ancient Cloud Dragon", 
+        "concentration": 19, 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect poison", 
+                "light", 
+                "mage hand", 
+                "message", 
+                "prestidigitation", 
+                "read magic", 
+                "resistance", 
+                "touch of fatigue"
+            ], 
+            "5th (7/day)": [
+                "cone of cold (DC 21)", 
+                "dismissal (DC 21)", 
+                "teleport"
+            ], 
+            "3rd (7/day)": [
+                "arcane sight", 
+                "cloak of winds", 
+                "stinking cloud (DC 19)", 
+                "suggestion (DC 19)"
+            ], 
+            "6th (5/day)": [
+                "chain lightning (DC 22)", 
+                "greater dispel magic"
+            ], 
+            "2nd (8/day)": [
+                "eagle's splendor", 
+                "glitterdust (DC 18)", 
+                "gust of wind", 
+                "locate object", 
+                "see invisibility"
+            ], 
+            "4th (7/day)": [
+                "elemental body I", 
+                "ice storm", 
+                "lesser geas (DC 20)", 
+                "river of wind"
+            ], 
+            "1st (8/day)": [
+                "alter winds", 
+                "charm person (DC 17)", 
+                "detect secret doors", 
+                "erase", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 13
+    }, 
+    {
+        "name": "Young Crystal Dragon", 
+        "concentration": 7, 
+        "spells": {
+            "0 (at will)": [
+                "acid splash", 
+                "detect magic", 
+                "ghost sound", 
+                "read magic "
+            ], 
+            "1st (5/day)": [
+                "shield", 
+                "unseen servant"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Crystal Dragon", 
+        "concentration": 7, 
+        "spells": {
+            "0 (at will)": [
+                "acid splash", 
+                "detect magic", 
+                "ghost sound", 
+                "read magic "
+            ], 
+            "1st (5/day)": [
+                "shield", 
+                "unseen servant"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Ancient Crystal Dragon", 
+        "concentration": 17, 
+        "spells": {
+            "4th (6/day)": [
+                "dimension door", 
+                "phantasmal killer (DC 22)"
+            ], 
+            "2nd (8/day)": [
+                "blindness/deafness (DC 20)", 
+                "invisibility", 
+                "minor image (DC 20)", 
+                "mirror image"
+            ], 
+            "0 (at will)": [
+                "acid splash", 
+                "detect magic", 
+                "detect poison", 
+                "ghost sound", 
+                "mage hand", 
+                "message", 
+                "read magic", 
+                "touch of fatigue"
+            ], 
+            "3rd (8/day)": [
+                "displacement", 
+                "lightning bolt (DC 21)", 
+                "major image (DC 21)"
+            ], 
+            "1st (8/day)": [
+                "alarm", 
+                "feather fall", 
+                "magic aura", 
+                "silent image (DC 19)", 
+                "unseen servant"
+            ]
+        }, 
+        "caster_level": 9
+    }, 
+    {
+        "name": "Young Magma Dragon", 
+        "concentration": 2, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 11)", 
+                "detect magic", 
+                "open/close", 
+                "spark"
+            ], 
+            "1st (4/day)": [
+                "flare burst (DC 12)", 
+                "grease (DC 12)"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Magma Dragon", 
+        "concentration": 10, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 13)", 
+                "detect magic", 
+                "detect poison", 
+                "open/close", 
+                "read magic", 
+                "spark", 
+                "touch of fatigue"
+            ], 
+            "2nd (7/day)": [
+                "dust of twilight", 
+                "flaming sphere (DC 15)", 
+                "glitterdust (DC 15)", 
+                "pyrotechnics (DC 15)"
+            ], 
+            "1st (7/day)": [
+                "feather fall", 
+                "flare burst (DC 14)", 
+                "grease (DC 14)", 
+                "shield", 
+                "true strike"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "fireball (DC 16)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Magma Dragon", 
+        "concentration": 20, 
+        "spells": {
+            "6th (6/day)": [
+                "chain lightning (DC 21)", 
+                "contagious flame (DC 21)", 
+                "eyebite (DC 21)"
+            ], 
+            "0 (at will)": [
+                "bleed (DC 15)", 
+                "detect magic", 
+                "detect poison", 
+                "ghost sound", 
+                "light", 
+                "open/close", 
+                "read magic", 
+                "spark", 
+                "touch of fatigue"
+            ], 
+            "5th (7/day)": [
+                "hungry pit (DC 20)", 
+                "polymorph", 
+                "teleport", 
+                "wall of force"
+            ], 
+            "3rd (7/day)": [
+                "displacement", 
+                "dispel magic", 
+                "fireball (DC 18)", 
+                "wind wall"
+            ], 
+            "4th (7/day)": [
+                "confusion (DC 19)", 
+                "acid pit (DC 19)", 
+                "dimensional anchor", 
+                "fire shield"
+            ], 
+            "7th (4/day)": [
+                "greater polymorph", 
+                "prismatic spray (DC 22)"
+            ], 
+            "2nd (7/day)": [
+                "darkness", 
+                "dust of twilight", 
+                "flaming sphere (DC 17)", 
+                "glitterdust (DC 17)", 
+                "pyrotechnics (DC 17)"
+            ], 
+            "1st (8/day)": [
+                "feather fall", 
+                "flare burst (DC 16)", 
+                "grease (DC 16)", 
+                "shield", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Umbral Dragon", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 13)", 
+                "detect magic", 
+                "detect poison", 
+                "read magic"
+            ], 
+            "1st (4/day)": [
+                "inflict light wounds (DC 14)", 
+                "shield"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Umbral Dragon", 
+        "concentration": 12, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 15)", 
+                "detect magic", 
+                "detect poison", 
+                "disrupt undead (DC 15)", 
+                "mage hand", 
+                "ray of frost", 
+                "read magic"
+            ], 
+            "2nd (7/day)": [
+                "command undead (DC 17)", 
+                "invisibility", 
+                "web (DC 17)"
+            ], 
+            "1st (8/day)": [
+                "grease (DC 16)", 
+                "inflict light wounds (DC 16)", 
+                "magic missile", 
+                "reduce person (DC 16)", 
+                "shield"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "inflict serious wounds (DC 18)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Umbral Dragon", 
+        "concentration": 22, 
+        "spells": {
+            "7th (5/day)": [
+                "destruction (DC 24)", 
+                "limited wish"
+            ], 
+            "0 (at will)": [
+                "acid splash", 
+                "bleed (DC 17)", 
+                "detect magic", 
+                "detect poison", 
+                "disrupt undead (DC 17)", 
+                "ghost sound", 
+                "mage hand", 
+                "ray of frost", 
+                "read magic"
+            ], 
+            "5th (7/day)": [
+                "greater command (DC 22)", 
+                "slay living (DC 22)", 
+                "teleport", 
+                "unhallow"
+            ], 
+            "6th (7/day)": [
+                "harm (DC 23)", 
+                "mislead", 
+                "veil (DC 23)"
+            ], 
+            "2nd (8/day)": [
+                "alter self", 
+                "blur", 
+                "command undead (DC 19)", 
+                "invisibility", 
+                "web (DC 17)"
+            ], 
+            "4th (7/day)": [
+                "enervation", 
+                "inflict crit. wounds (DC 21)", 
+                "phantasmal killer (DC 21)", 
+                "unholy blight (DC 21)"
+            ], 
+            "1st (8/day)": [
+                "inflict light wounds (DC 18)", 
+                "grease (DC 18)", 
+                "magic missile", 
+                "reduce person (DC 18)", 
+                "shield"
+            ], 
+            "3rd (8/day)": [
+                "dispel magic", 
+                "haste", 
+                "inflict serious wounds (DC 20)", 
+                "lightning bolt (DC 20)"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Ifrit", 
+        "bloodline": "Spell", 
+        "type": "Sorcerer", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "acid splash", 
+                "detect magic", 
+                "flare (DC 14)", 
+                "prestidigitation"
+            ], 
+            "1st (4/day)": [
+                "burning hands (DC 15)", 
+                "mage armor"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Lamia Matriarch", 
+        "concentration": 11, 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "daze (DC 15)", 
+                "detect magic", 
+                "ghost sound (DC 15)", 
+                "mage hand", 
+                "mending", 
+                "prestidigitation"
+            ], 
+            "3rd (4/day)": [
+                "haste"
+            ], 
+            "1st (8/day)": [
+                "cure light wounds", 
+                "divine favor", 
+                "mage armor", 
+                "magic missile"
+            ], 
+            "2nd (6/day)": [
+                "death knell (DC 17)", 
+                "invisibility"
+            ]
+        }, 
+        "caster_level": 6
+    }, 
+    {
+        "name": "Werebear (Human Form)", 
+        "type": "Ranger", 
+        "concentration": 2, 
+        "spells": {
+            "1st": [
+                "detect poison"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Neh-Thalggu", 
+        "type": "Sorcerer", 
+        "concentration": 17, 
+        "spells": {
+            "0 (at will)": [
+                "acid splash", 
+                "dancing lights", 
+                "detect magic", 
+                "mage hand", 
+                "open/close", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "2nd (7/day)": [
+                "acid arrow", 
+                "alter self", 
+                "invisibility"
+            ], 
+            "1st (7/day)": [
+                "grease (DC 14)", 
+                "magic missile", 
+                "ray of enfeeblement (DC 14)", 
+                "shield", 
+                "unseen servant"
+            ], 
+            "3rd (5/day)": [
+                "lightning bolt (DC16)", 
+                "hold person (DC 16)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Red Wyrm Ravener", 
+        "type": "Sorcerer", 
+        "spells": {
+            "3rd": [
+                "displacement", 
+                "haste", 
+                "slow (DC 21)", 
+                "vampiric touch"
+            ], 
+            "6th": [
+                "chain lightning (DC 24)", 
+                "greater dispel magic", 
+                "true seeing"
+            ], 
+            "5th": [
+                "cone of cold (DC 23)", 
+                "dominate person (DC 23)", 
+                "feeblemind (DC 23)", 
+                "wall of force"
+            ], 
+            "2nd": [
+                "detect thoughts (DC 20)", 
+                "false life", 
+                "mirror image", 
+                "see invisibility", 
+                "web (DC 20)"
+            ], 
+            "0": [
+                "arcane mark", 
+                "detect magic", 
+                "mage hand", 
+                "mending", 
+                "message", 
+                "prestidigitation", 
+                "ray of frost", 
+                "read magic", 
+                "touch of fatigue"
+            ], 
+            "4th": [
+                "charm monster (DC 22)", 
+                "confusion (DC 22)", 
+                "greater invisibility", 
+                "solid fog"
+            ], 
+            "9th": [
+                "energy drain", 
+                "time stop", 
+                "wish"
+            ], 
+            "1st": [
+                "mage armor", 
+                "magic missile", 
+                "ray of enfeeblement (DC 19)", 
+                "shield", 
+                "true strike"
+            ], 
+            "7th": [
+                "forcecage (DC 25)", 
+                "greater teleport", 
+                "spell turning"
+            ], 
+            "8th": [
+                "dimensional lock", 
+                "horrid wilting (DC 26)", 
+                "maze"
+            ]
+        }, 
+        "caster_level": 20
+    }, 
+    {
+        "name": "Undine", 
+        "type": "Cleric", 
+        "domains": [
+            "Spell"
+        ], 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "create water", 
+                "guidance", 
+                "stabilize"
+            ], 
+            "1st": [
+                "bless", 
+                "charm person", 
+                "divine favor"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Worm that Walks", 
+        "type": "Conjurer", 
+        "concentration": 18, 
+        "spells": {
+            "3rd": [
+                "dispel magic", 
+                "fly", 
+                "protection from energy", 
+                "slow (DC 18)", 
+                "stinking cloud (DC 18)", 
+                "summon monster III"
+            ], 
+            "6th": [
+                "acid fog", 
+                "disintegrate (DC 21)", 
+                "summon monster VI"
+            ], 
+            "5th": [
+                "cloudkill (DC 20)", 
+                "dismissal (DC 20)", 
+                "shadow evocation (DC 20)", 
+                "telekinesis (DC 20)", 
+                "teleport"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "mage hand", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "2nd": [
+                "acid arrow", 
+                "detect thoughts (DC 17)", 
+                "fog cloud", 
+                "glitterdust (DC 17)", 
+                "invisibility", 
+                "summon swarm"
+            ], 
+            "4th": [
+                "black tentacles", 
+                "confusion (DC 19)", 
+                "dimension door (2)", 
+                "phantasmal killer (DC 19)", 
+                "summon monster IV"
+            ], 
+            "1st": [
+                "charm person (DC 16)", 
+                "feather fall", 
+                "grease (DC 16)", 
+                "obscuring mist", 
+                "protection from good", 
+                "reduce person (DC 16)", 
+                "shield"
+            ], 
+            "7th": [
+                "plane shift (DC 22)", 
+                "project image"
+            ]
+        }, 
+        "opposition_schools": [
+            "Evocation", 
+            "Necromancy"
+        ], 
+        "caster_level": 13
+    }
+]

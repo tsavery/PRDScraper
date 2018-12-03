@@ -1,0 +1,1597 @@
+[
+    {
+        "name": "Aasimar", 
+        "domains": [
+            "Good", 
+            "Healing"
+        ], 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "guidance", 
+                "stabilize"
+            ], 
+            "1st": [
+                "bless", 
+                "command (DC 14)", 
+                "protection from evilD"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Planetar", 
+        "spells": {
+            "3rd": [
+                "cure serious wounds (2)", 
+                "daylight", 
+                "invisibility purge", 
+                "summon monster III", 
+                "wind wall"
+            ], 
+            "6th": [
+                "banishment (DC 23)", 
+                "greater dispel magic", 
+                "heal", 
+                "mass cure moderate wounds (DC 23)"
+            ], 
+            "5th": [
+                "break enchantment", 
+                "dispel evil (2, DC 22)", 
+                "plane shift (DC 22)", 
+                "righteous might"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "purify food and drink", 
+                "stabilize", 
+                "virtue"
+            ], 
+            "2nd": [
+                "align weapon (2)", 
+                "bear's endurance (2)", 
+                "cure moderate wounds (2)", 
+                "eagle's splendor"
+            ], 
+            "4th": [
+                "death ward", 
+                "dismissal (DC 21)", 
+                "neutralize poison (DC 21)", 
+                "summon monster IV"
+            ], 
+            "1st": [
+                "bless (2)", 
+                "cure light wounds (4)", 
+                "shield of faith"
+            ], 
+            "7th": [
+                "holy word (DC 24)", 
+                "regenerate (2)"
+            ], 
+            "8th": [
+                "earthquake (DC 25)", 
+                "fire storm (DC 25)"
+            ]
+        }, 
+        "caster_level": 16
+    }, 
+    {
+        "name": "Solar", 
+        "spells": {
+            "3rd": [
+                "cure serious wounds", 
+                "daylight", 
+                "invisibility purge", 
+                "magic circle against evil", 
+                "prayer", 
+                "protection from energy", 
+                "wind wall"
+            ], 
+            "6th": [
+                "banishment (DC 24)", 
+                "heroes' feast", 
+                "mass cure moderate wounds", 
+                "undeath to death (DC 24)", 
+                "word of recall"
+            ], 
+            "5th": [
+                "break enchantment", 
+                "breath of life", 
+                "dispel evil (DC 23)", 
+                "plane shift (DC 23)", 
+                "righteous might", 
+                "symbol of sleep (DC 23)"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "purify food and drink", 
+                "stabilize", 
+                "virtue"
+            ], 
+            "2nd": [
+                "align weapon", 
+                "bear's endurance", 
+                "bull's strength", 
+                "consecrate", 
+                "cure moderate wounds (2)", 
+                "eagle's splendor"
+            ], 
+            "4th": [
+                "cure critical wounds (3)", 
+                "death ward", 
+                "dismissal (DC 22)", 
+                "neutralize poison (2) (DC 22)"
+            ], 
+            "9th": [
+                "etherealness", 
+                "mass heal", 
+                "miracle", 
+                "storm of vengeance (DC 27)"
+            ], 
+            "1st": [
+                "bless", 
+                "cure light wounds (3)", 
+                "divine favor", 
+                "entropic shield", 
+                "shield of faith"
+            ], 
+            "7th": [
+                "destruction (DC 25)", 
+                "dictum (DC 25)", 
+                "ethereal jaunt", 
+                "holy word (DC 25)", 
+                "regenerate"
+            ], 
+            "8th": [
+                "fire storm (DC 26)", 
+                "holy aura (2) (DC 26)", 
+                "mass cure critical wounds (2)"
+            ]
+        }, 
+        "caster_level": 20
+    }, 
+    {
+        "name": "Trumpet Archon", 
+        "spells": {
+            "3rd": [
+                "cure serious wounds", 
+                "daylight", 
+                "invisibility purge", 
+                "magic vestment", 
+                "protection from energy"
+            ], 
+            "6th": [
+                "banishment (DC 21)", 
+                "heal (2)"
+            ], 
+            "5th": [
+                "dispel evil (DC 20)", 
+                "mass cure light wounds", 
+                "plane shift (DC 20)", 
+                "raise dead"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "purify food and drink", 
+                "stabilize", 
+                "virtue"
+            ], 
+            "2nd": [
+                "bull's strength", 
+                "consecrate", 
+                "cure moderate wounds (2)", 
+                "lesser restoration (2)", 
+                "owl's wisdom"
+            ], 
+            "4th": [
+                "dismissal (DC 19)", 
+                "divine power", 
+                "neutralize poison (DC 19)", 
+                "spell immunity"
+            ], 
+            "1st": [
+                "bless", 
+                "cure light wounds (3)", 
+                "divine favor", 
+                "sanctuary (DC 16)", 
+                "shield of faith"
+            ], 
+            "7th": [
+                "mass cure serious wounds (2)"
+            ]
+        }, 
+        "caster_level": 14
+    }, 
+    {
+        "name": "Ghaele", 
+        "spells": {
+            "3rd": [
+                "cure serious wounds (3)", 
+                "searing light (2)"
+            ], 
+            "6th": [
+                "banishment (DC 20)", 
+                "heal (DC 20)"
+            ], 
+            "5th": [
+                "flame strike (DC 19)", 
+                "raise dead", 
+                "true seeing"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "purify food and drink", 
+                "stabilize", 
+                "virtue"
+            ], 
+            "2nd": [
+                "aid", 
+                "align weapon", 
+                "bear's endurance", 
+                "lesser restoration (2)"
+            ], 
+            "4th": [
+                "death ward", 
+                "dismissal (2) (DC 18)", 
+                "divine power", 
+                "restoration"
+            ], 
+            "1st": [
+                "bless", 
+                "command (DC 15)", 
+                "divine favor", 
+                "obscuring mist", 
+                "shield of faith"
+            ], 
+            "7th": [
+                "holy word (DC 21)"
+            ]
+        }, 
+        "caster_level": 13
+    }, 
+    {
+        "name": "Lillend", 
+        "spells": {
+            "3rd (2/day)": [
+                "charm monster (DC 17)", 
+                "cure serious wounds"
+            ], 
+            "0 (at will)": [
+                "dancing lights", 
+                "daze (DC 14)", 
+                "detect magic", 
+                "lullaby (DC 14)", 
+                "mage hand", 
+                "read magic"
+            ], 
+            "1st (5/day)": [
+                "charm person (DC 15)", 
+                "cure light wounds", 
+                "identify", 
+                "sleep (DC 15)"
+            ], 
+            "2nd (4/day)": [
+                "hold person (DC 16)", 
+                "invisibility", 
+                "sound burst (DC 16)", 
+                "suggestion (DC 16)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Couatl", 
+        "spells": {
+            "0 (at will)": [
+                "daze", 
+                "disrupt undead", 
+                "light", 
+                "ray of frost", 
+                "read magic", 
+                "resistance", 
+                "stabilize"
+            ], 
+            "2nd (7/day)": [
+                "cure moderate wounds", 
+                "eagle's splendor", 
+                "scorching ray", 
+                "silence (DC 15)"
+            ], 
+            "4th (4/day)": [
+                "charm monster (DC 17)", 
+                "freedom of movement"
+            ], 
+            "1st (7/day)": [
+                "endure elements", 
+                "mage armor", 
+                "obscuring mist", 
+                "protection from chaos", 
+                "true strike"
+            ], 
+            "3rd (7/day)": [
+                "gaseous form", 
+                "magic circle against evil", 
+                "summon monster III"
+            ]
+        }, 
+        "caster_level": 9
+    }, 
+    {
+        "name": "Young Black Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "mending", 
+                "message", 
+                "read magic"
+            ], 
+            "1st (6/day)": [
+                "alarm", 
+                "mage armor", 
+                "obscuring mist"
+            ]
+        }, 
+        "caster_level": 3
+    }, 
+    {
+        "name": "Adult Black Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "mending", 
+                "message", 
+                "read magic"
+            ], 
+            "1st (6/day)": [
+                "alarm", 
+                "mage armor", 
+                "obscuring mist"
+            ]
+        }, 
+        "caster_level": 3
+    }, 
+    {
+        "name": "Ancient Black Dragon", 
+        "spells": {
+            "5th (4/day)": [
+                "cone of cold (DC 19)", 
+                "wall of force"
+            ], 
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "light", 
+                "mage hand", 
+                "mending", 
+                "message", 
+                "prestidigitation", 
+                "read magic", 
+                "resistance"
+            ], 
+            "3rd (7/day)": [
+                "dispel magic", 
+                "heroism", 
+                "hold person (DC 17)", 
+                "slow (DC 17)"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "mage armor", 
+                "magic missile", 
+                "obscuring mist", 
+                "true strike"
+            ], 
+            "4th (7/day)": [
+                "arcane eye", 
+                "black tentacles", 
+                "dimension door"
+            ], 
+            "2nd (7/day)": [
+                "blur", 
+                "glitterdust (DC 16)", 
+                "invisibility", 
+                "summon swarm", 
+                "whispering wind"
+            ]
+        }, 
+        "caster_level": 11
+    }, 
+    {
+        "name": "Young Blue Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "arcane mark", 
+                "detect magic", 
+                "mage hand", 
+                "mending", 
+                "read magic", 
+                "resistance"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "mage armor", 
+                "shield", 
+                "true strike"
+            ], 
+            "2nd (5/day)": [
+                "invisibility", 
+                "resist energy"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Adult Blue Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "arcane mark", 
+                "detect magic", 
+                "mage hand", 
+                "mending", 
+                "read magic", 
+                "resistance"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "mage armor", 
+                "shield", 
+                "true strike"
+            ], 
+            "2nd (5/day)": [
+                "invisibility", 
+                "resist energy"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Ancient Blue Dragon", 
+        "spells": {
+            "6th (4/day)": [
+                "forceful hand", 
+                "mislead"
+            ], 
+            "0 (at will)": [
+                "arcane mark", 
+                "bleed (DC 15)", 
+                "detect magic", 
+                "light", 
+                "mage hand", 
+                "mending", 
+                "message", 
+                "read magic", 
+                "resistance"
+            ], 
+            "5th (7/day)": [
+                "dream", 
+                "persistent image", 
+                "hold monster (DC 20)"
+            ], 
+            "3rd (7/day)": [
+                "dispel magic", 
+                "displacement", 
+                "haste", 
+                "vampiric touch"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "mage armor", 
+                "shield", 
+                "true strike", 
+                "unseen servant"
+            ], 
+            "4th (7/day)": [
+                "dimension door", 
+                "enervation", 
+                "fire shield", 
+                "stoneskin"
+            ], 
+            "2nd (7/day)": [
+                "darkness", 
+                "false life", 
+                "invisibility", 
+                "resist energy", 
+                "shatter"
+            ]
+        }, 
+        "caster_level": 13
+    }, 
+    {
+        "name": "Young Green Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "ghost sound", 
+                "mage hand", 
+                "message", 
+                "prestidigitation"
+            ], 
+            "1st (7/day)": [
+                "shield", 
+                "silent image (DC 14)", 
+                "summon monster I", 
+                "ventriloquism (DC 14)"
+            ], 
+            "2nd (5/day)": [
+                "alter self", 
+                "mirror image"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Adult Green Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "ghost sound", 
+                "mage hand", 
+                "message", 
+                "prestidigitation"
+            ], 
+            "1st (7/day)": [
+                "shield", 
+                "silent image (DC 14)", 
+                "summon monster I", 
+                "ventriloquism (DC 14)"
+            ], 
+            "2nd (5/day)": [
+                "alter self", 
+                "mirror image"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Ancient Green Dragon", 
+        "spells": {
+            "6th (4/day)": [
+                "disintegrate (DC 21)", 
+                "true seeing"
+            ], 
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "ghost sound", 
+                "mage hand", 
+                "message", 
+                "prestidigitation"
+            ], 
+            "5th (7/day)": [
+                "polymorph", 
+                "summon monster V", 
+                "teleport"
+            ], 
+            "3rd (7/day)": [
+                "dispel magic", 
+                "displacement", 
+                "fireball (DC 18)", 
+                "haste"
+            ], 
+            "1st (7/day)": [
+                "magic missile", 
+                "shield", 
+                "silent image (DC 16)", 
+                "summon monster I", 
+                "ventriloquism (DC 16)"
+            ], 
+            "4th (7/day)": [
+                "dimension door", 
+                "ice storm", 
+                "scrying (DC 19)", 
+                "stoneskin"
+            ], 
+            "2nd (7/day)": [
+                "alter self", 
+                "detect thoughts (DC 17)", 
+                "locate object", 
+                "mirror image", 
+                "see invisibility"
+            ]
+        }, 
+        "caster_level": 13
+    }, 
+    {
+        "name": "Young Red Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "mage hand", 
+                "message", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "1st (3/day)": [
+                "shield", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Red Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "arcane mark", 
+                "light", 
+                "mage hand", 
+                "mending", 
+                "message", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "2nd (7/day)": [
+                "invisibility", 
+                "resist energy", 
+                "see invisibility"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "grease (DC 14)", 
+                "magic missile", 
+                "shield", 
+                "true strike"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "haste"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Red Dragon", 
+        "spells": {
+            "6th (6/day)": [
+                "antimagic field", 
+                "contingency", 
+                "greater dispel magic"
+            ], 
+            "0 (at will)": [
+                "arcane mark", 
+                "bleed", 
+                "light", 
+                "mage hand", 
+                "mending", 
+                "message", 
+                "open/close", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "5th (7/day)": [
+                "polymorph", 
+                "telekinesis (DC 20)", 
+                "teleport", 
+                "wall of force"
+            ], 
+            "3rd (7/day)": [
+                "dispel magic", 
+                "displacement", 
+                "haste", 
+                "tongues"
+            ], 
+            "4th (7/day)": [
+                "fear (DC 19)", 
+                "fire shield", 
+                "greater invisibility", 
+                "stoneskin"
+            ], 
+            "7th (4/day)": [
+                "limited wish", 
+                "spell turning"
+            ], 
+            "2nd (7/day)": [
+                "alter self", 
+                "detect thoughts (DC 17)", 
+                "misdirection (DC 17)", 
+                "resist energy", 
+                "see invisibility"
+            ], 
+            "1st (8/day)": [
+                "alarm", 
+                "grease (DC 16)", 
+                "magic missile", 
+                "shield", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young White Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "ray of frost", 
+                "mending"
+            ], 
+            "1st (4/day)": [
+                "shield", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult White Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "ray of frost", 
+                "mending"
+            ], 
+            "1st (4/day)": [
+                "shield", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Ancient White Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "acid splash", 
+                "dancing lights", 
+                "detect magic", 
+                "ghost sound", 
+                "mage hand", 
+                "mending", 
+                "message", 
+                "ray of frost"
+            ], 
+            "2nd (7/day)": [
+                "invisibility", 
+                "fog cloud", 
+                "resist energy", 
+                "see invisibility"
+            ], 
+            "4th (4/day)": [
+                "charm monster (DC 17)", 
+                "dimension door"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "grease (DC 14)", 
+                "magic aura", 
+                "shield", 
+                "true strike"
+            ], 
+            "3rd (7/day)": [
+                "dispel magic", 
+                "displacement", 
+                "lightning bolt (DC 16)"
+            ]
+        }, 
+        "caster_level": 9
+    }, 
+    {
+        "name": "Young Brass Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "mage hand", 
+                "message"
+            ], 
+            "1st (4/day)": [
+                "charm person (DC 13)", 
+                "comprehend languages"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Brass Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "arcane mark", 
+                "dancing lights", 
+                "detect magic", 
+                "ghost sound (DC 13)", 
+                "mage hand", 
+                "message", 
+                "prestidigitation"
+            ], 
+            "2nd (7/day)": [
+                "alter self", 
+                "detect thoughts (DC 15)", 
+                "see invisibility"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "charm person (DC 16)", 
+                "protection from evil", 
+                "shield", 
+                "ventriloquism"
+            ], 
+            "3rd (5/day)": [
+                "hold person (DC 18)", 
+                "tongues"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Brass Dragon", 
+        "spells": {
+            "6th (6/day)": [
+                "forceful hand", 
+                "geas", 
+                "greater dispel magic"
+            ], 
+            "0 (at will)": [
+                "arcane mark", 
+                "dancing lights", 
+                "d. magic", 
+                "d. poison", 
+                "ghost sound (DC 15)", 
+                "mage hand", 
+                "message", 
+                "prestidigitation", 
+                "r. magic"
+            ], 
+            "5th (7/day)": [
+                "contact other plane", 
+                "dominate person (DC 22)", 
+                "mirage arcana", 
+                "prying eyes"
+            ], 
+            "3rd (7/day)": [
+                "displacement", 
+                "heroism", 
+                "hold person (DC 20)", 
+                "tongues"
+            ], 
+            "4th (7/day)": [
+                "charm monster (DC 21)", 
+                "confusion (DC 21)", 
+                "dimensional anchor", 
+                "locate creature"
+            ], 
+            "7th (4/day)": [
+                "g. teleport", 
+                "power word blind"
+            ], 
+            "2nd (7/day)": [
+                "alter self", 
+                "detect thoughts (DC 17)", 
+                "locate object", 
+                "resist energy", 
+                "see invisibility"
+            ], 
+            "1st (8/day)": [
+                "alarm", 
+                "charm person (DC 18)", 
+                "protection from evil", 
+                "shield", 
+                "ventriloquism"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Bronze Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "message", 
+                "resistance"
+            ], 
+            "1st (4/day)": [
+                "alarm", 
+                "obscuring mist"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Bronze Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "message", 
+                "resistance", 
+                "2 more"
+            ], 
+            "2nd (7/day)": [
+                "blur", 
+                "gust of wind", 
+                "mirror image"
+            ], 
+            "1st (8/day)": [
+                "alarm", 
+                "mage armor", 
+                "obscuring mist", 
+                "shield", 
+                "true strike"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "slow (DC 18)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Bronze Dragon", 
+        "spells": {
+            "7th (5/day)": [
+                "spell turning", 
+                "statue"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "message", 
+                "resistance", 
+                "2 more"
+            ], 
+            "5th (7/day)": [
+                "dismissal", 
+                "interposing hand", 
+                "mind fog", 
+                "teleport"
+            ], 
+            "6th (7/day)": [
+                "greater dispel magic", 
+                "mass suggestion (DC 23)", 
+                "mislead"
+            ], 
+            "3rd (7/day)": [
+                "dispel magic", 
+                "heroism", 
+                "slow (DC 20)", 
+                "suggestion"
+            ], 
+            "2nd (8/day)": [
+                "blur", 
+                "gust of wind", 
+                "invisibility", 
+                "mirror image", 
+                "web"
+            ], 
+            "4th (7/day)": [
+                "dimension door", 
+                "ice storm", 
+                "solid fog", 
+                "stoneskin"
+            ], 
+            "1st (8/day)": [
+                "alarm", 
+                "mage armor", 
+                "obscuring mist", 
+                "shield", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Copper Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "ghost sound (DC 12)", 
+                "light", 
+                "message"
+            ], 
+            "1st (4/day)": [
+                "alarm", 
+                "silent image (DC 13)"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Copper Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "ghost sound (DC 14)", 
+                "light", 
+                "message", 
+                "open/close", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "2nd (7/day)": [
+                "glitterdust (DC 16)", 
+                "invisibility", 
+                "phantom trap"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "identify", 
+                "magic missile", 
+                "shield", 
+                "silent image (DC 15)"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "major image (DC 17)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Copper Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "detect magic", 
+                "ghost sound (DC 17)", 
+                "light", 
+                "mage hand", 
+                "message", 
+                "open/close", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "5th (7/day)": [
+                "mind fog (DC 21)", 
+                "polymorph", 
+                "sending", 
+                "teleport"
+            ], 
+            "6th (7/day)": [
+                "antimagic field", 
+                "mislead", 
+                "programmed image (DC 23)"
+            ], 
+            "3rd (7/day)": [
+                "dispel magic", 
+                "haste", 
+                "suggestion (DC 19)", 
+                "tongues"
+            ], 
+            "4th (7/day)": [
+                "confusion", 
+                "rainbow pattern", 
+                "stone shape", 
+                "stoneskin"
+            ], 
+            "7th (4/day)": [
+                "reverse gravity", 
+                "teleport object (DC 23)"
+            ], 
+            "2nd (7/day)": [
+                "glitterdust (DC 18)", 
+                "invisibility", 
+                "phantom trap", 
+                "pyrotechnics", 
+                "see invisibility"
+            ], 
+            "1st (8/day)": [
+                "expeditious retreat", 
+                "magic aura", 
+                "obscuring mist", 
+                "shield", 
+                "silent image (DC 18)"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Gold Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "mending", 
+                "stabilize"
+            ], 
+            "1st (4/day)": [
+                "mage armor", 
+                "shield"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Gold Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "mending", 
+                "stabilize", 
+                "3 more"
+            ], 
+            "2nd (7/day)": [
+                "aid", 
+                "cure moderate wounds (DC 17)", 
+                "resist energy"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "divine favor", 
+                "mage armor", 
+                "shield", 
+                "shield of faith"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "prayer"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Gold Dragon", 
+        "spells": {
+            "7th (5/day)": [
+                "greater teleport", 
+                "resurrection"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "mending", 
+                "stabilize", 
+                "6 more"
+            ], 
+            "5th (7/day)": [
+                "dispel evil", 
+                "plane shift", 
+                "teleport", 
+                "true seeing"
+            ], 
+            "6th (7/day)": [
+                "antimagic field", 
+                "greater dispel magic", 
+                "heal"
+            ], 
+            "3rd (7/day)": [
+                "dispel magic", 
+                "haste", 
+                "invisibility purge", 
+                "prayer"
+            ], 
+            "2nd (8/day)": [
+                "aid", 
+                "cure moderate wounds", 
+                "lesser restoration", 
+                "resist energy", 
+                "silence"
+            ], 
+            "4th (7/day)": [
+                "divination", 
+                "restoration", 
+                "spell immunity", 
+                "stoneskin"
+            ], 
+            "1st (8/day)": [
+                "alarm", 
+                "divine favor", 
+                "mage armor", 
+                "shield", 
+                "shield of faith"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Silver Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "message", 
+                "read magic"
+            ], 
+            "1st (4/day)": [
+                "alarm", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Silver Dragon", 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "flare", 
+                "light", 
+                "message", 
+                "prestidigitation", 
+                "read magic", 
+                "stabilize"
+            ], 
+            "2nd (7/day)": [
+                "augury", 
+                "cure moderate wounds", 
+                "web (DC 17)"
+            ], 
+            "1st (7/day)": [
+                "alarm", 
+                "bless", 
+                "divine favor", 
+                "shield", 
+                "true strike"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "wind wall"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Silver Dragon", 
+        "spells": {
+            "7th (5/day)": [
+                "holy word (DC 24)", 
+                "repulsion (DC 24)"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "flare (DC 17)", 
+                "light", 
+                "message", 
+                "prestidigitation", 
+                "read magic", 
+                "stabilize", 
+                "resistance", 
+                "virtue"
+            ], 
+            "5th (7/day)": [
+                "break enchantment", 
+                "flame strike (DC 22)", 
+                "plane shift", 
+                "wall of force"
+            ], 
+            "6th (7/day)": [
+                "banishment (DC 23)", 
+                "greater dispel magic", 
+                "heal"
+            ], 
+            "3rd (7/day)": [
+                "cure serious wounds", 
+                "dispel magic", 
+                "hold person (DC 20)", 
+                "wind wall"
+            ], 
+            "2nd (8/day)": [
+                "augury", 
+                "calm emotions (DC 19)", 
+                "cure moderate wounds", 
+                "invisibility", 
+                "web"
+            ], 
+            "4th (7/day)": [
+                "dimension door", 
+                "freedom of movement", 
+                "restoration", 
+                "solid fog"
+            ], 
+            "1st (8/day)": [
+                "bless", 
+                "divine favor", 
+                "protection from evil", 
+                "shield", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Drider", 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 13)", 
+                "daze (DC 13)", 
+                "ghost sound", 
+                "mage hand", 
+                "ray of frost", 
+                "read magic", 
+                "resistance"
+            ], 
+            "3rd (4/day)": [
+                "lightning bolt (DC 16)"
+            ], 
+            "1st (7/day)": [
+                "mage armor", 
+                "magic missile", 
+                "ray of enfeeblement (DC 14)", 
+                "silent image (DC 14)"
+            ], 
+            "2nd (6/day)": [
+                "invisibility", 
+                "web (DC 15)"
+            ]
+        }, 
+        "caster_level": 6
+    }, 
+    {
+        "name": "Drow Noble", 
+        "domains": [
+            "Chaos", 
+            "Death"
+        ], 
+        "spells": {
+            "0": [
+                "bleed (DC 13)", 
+                "detect poison", 
+                "read magic", 
+                "resistance"
+            ], 
+            "1st": [
+                "bless", 
+                "cause fear (DC 14)", 
+                "cure light wounds", 
+                "protection from lawD"
+            ], 
+            "2nd": [
+                "death knellD (DC 15)", 
+                "hold person (DC 15)", 
+                "silence (DC 15)"
+            ]
+        }, 
+        "caster_level": 3
+    }, 
+    {
+        "name": "Lich", 
+        "spells": {
+            "3rd": [
+                "dispel magic (2)", 
+                "fireball (DC 19)", 
+                "suggestion (DC 19)", 
+                "vampiric touch (2)"
+            ], 
+            "6th": [
+                "circle of death (DC 22)", 
+                "globe of invulnerability", 
+                "maximized fireball (DC 19)"
+            ], 
+            "5th": [
+                "cloudkill (DC 21)", 
+                "cone of cold (DC 21)", 
+                "quickened magic missile", 
+                "waves of fatigue "
+            ], 
+            "2nd": [
+                "darkness", 
+                "extended mage armor (already cast)", 
+                "false life (already cast)", 
+                "scorching ray (2)", 
+                "see invisibility", 
+                "spectral hand"
+            ], 
+            "0": [
+                "bleed (DC 16)", 
+                "detect magic", 
+                "ray of frost", 
+                "read magic"
+            ], 
+            "4th": [
+                "dimension door", 
+                "enervation", 
+                "fire shield", 
+                "wall of ice (2)"
+            ], 
+            "1st": [
+                "magic missile (3)", 
+                "ray of enfeeblement (2)", 
+                "shield (2)"
+            ]
+        }, 
+        "opposition_schools": [
+            "illusion", 
+            "transmutation"
+        ], 
+        "caster_level": 11
+    }, 
+    {
+        "name": "Dark Naga", 
+        "spells": {
+            "0 (at will)": [
+                "daze", 
+                "detect magic", 
+                "light", 
+                "mage hand", 
+                "open/close", 
+                "ray of frost", 
+                "read magic"
+            ], 
+            "2nd (7/day)": [
+                "cat's grace", 
+                "invisibility", 
+                "scorching ray"
+            ], 
+            "1st (7/day)": [
+                "expeditious retreat", 
+                "magic missile", 
+                "ray of enfeeblement (DC 14)", 
+                "shield", 
+                "silent image"
+            ], 
+            "3rd (5/day)": [
+                "displacement", 
+                "lightning bolt (DC 16)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Guardian Naga", 
+        "spells": {
+            "4th (5/day)": [
+                "divine power", 
+                "greater invisibility"
+            ], 
+            "0 (at will)": [
+                "daze (DC 14)", 
+                "detect magic", 
+                "light", 
+                "mage hand", 
+                "open/close", 
+                "ray of frost", 
+                "read magic", 
+                "stabilize"
+            ], 
+            "2nd (7/day)": [
+                "detect thoughts (DC 16)", 
+                "lesser restoration", 
+                "see invisibility", 
+                "scorching ray"
+            ], 
+            "1st (7/day)": [
+                "cure light wounds", 
+                "divine favor", 
+                "expeditious retreat", 
+                "mage armor", 
+                "magic missile"
+            ], 
+            "3rd (7/day)": [
+                "cure serious wounds", 
+                "dispel magic", 
+                "lightning bolt (DC 17)"
+            ]
+        }, 
+        "caster_level": 9
+    }, 
+    {
+        "name": "Spirit Naga", 
+        "spells": {
+            "0 (at will)": [
+                "bleed", 
+                "daze (DC 13)", 
+                "detect magic", 
+                "mage hand", 
+                "open/close", 
+                "ray of frost", 
+                "read magic"
+            ], 
+            "2nd (7/day)": [
+                "cat's grace", 
+                "invisibility", 
+                "summon swarm"
+            ], 
+            "1st (7/day)": [
+                "charm person (DC 14)", 
+                "cure light wounds", 
+                "divine favor", 
+                "magic missile", 
+                "shield of faith"
+            ], 
+            "3rd (5/day)": [
+                "displacement", 
+                "fireball (DC 16)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Nymph", 
+        "spells": {
+            "1st": [
+                "charm animal (DC 14)", 
+                "endure elements", 
+                "entangle (DC 14)", 
+                "obscuring mist", 
+                "produce flame"
+            ], 
+            "0": [
+                "detect magic", 
+                "guidance", 
+                "light", 
+                "stabilize"
+            ], 
+            "4th": [
+                "summon nature's ally IV"
+            ], 
+            "3rd": [
+                "call lightning (DC 16)", 
+                "cure moderate wounds", 
+                "water breathing"
+            ], 
+            "2nd": [
+                "barkskin", 
+                "flame blade", 
+                "resist energy", 
+                "tree shape"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Rakshasa", 
+        "spells": {
+            "0": [
+                "dancing lights", 
+                "detect magic", 
+                "ghost sound (DC 13)", 
+                "mage hand", 
+                "mending", 
+                "message", 
+                "prestidigitation"
+            ], 
+            "2nd (7/day)": [
+                "acid arrow", 
+                "invisibility", 
+                "minor image"
+            ], 
+            "1st (7/day)": [
+                "charm person (DC 14)", 
+                "mage armor", 
+                "magic missile", 
+                "shield", 
+                "silent image"
+            ], 
+            "3rd (5/day)": [
+                "lightning bolt (DC 16)", 
+                "suggestion (DC 16)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Vampire", 
+        "bloodline": "Spell", 
+        "type": "Sorcerer", 
+        "spells": {
+            "4th (5/day)": [
+                "greater invisibility"
+            ], 
+            "0": [
+                "acid splash", 
+                "detect magic", 
+                "light", 
+                "mage hand", 
+                "mending", 
+                "message", 
+                "open/close", 
+                "read magic"
+            ], 
+            "2nd (8/day)": [
+                "false life", 
+                "invisibility", 
+                "scorching ray", 
+                "web (DC 20)"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "fireball (DC 21)", 
+                "vampiric touch"
+            ], 
+            "1st (8/day)": [
+                "burning hands (DC 19)", 
+                "chill touch (DC 19)", 
+                "disguise self", 
+                "expeditious retreat", 
+                "mage armor", 
+                "magic missile"
+            ]
+        }, 
+        "caster_level": 8
+    }
+]

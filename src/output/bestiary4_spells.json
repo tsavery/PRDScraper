@@ -1,0 +1,1027 @@
+[
+    {
+        "name": "Broken Soul Lillend", 
+        "type": "Bard", 
+        "concentration": 2, 
+        "spells": {
+            "3rd (2/day)": [
+                "crushing despair (DC 18)", 
+                "terrible remorse (DC 18)"
+            ], 
+            "2nd (4/day)": [
+                "blindness/deafness (DC 17)", 
+                "piercing shriek (DC 17)", 
+                "rage", 
+                "suggestion (DC 17)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Changeling", 
+        "type": "Witch", 
+        "concentration": 3, 
+        "spells": {
+            "0 (at will)": [
+                "daze (DC 13)", 
+                "light", 
+                "touch of fatigue (DC 13)"
+            ], 
+            "1st": [
+                "hypnotism (DC 14)", 
+                "sleep (DC 14)"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Devilbound Sorcerer", 
+        "bloodline": "Spell", 
+        "type": "Sorcerer", 
+        "concentration": 20, 
+        "spells": {
+            "0 (at will)": [
+                "acid splash", 
+                "arcane mark", 
+                "detect magic", 
+                "ghost sound (DC 17)", 
+                "mage hand", 
+                "mending", 
+                "message", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "5th (7/day)": [
+                "cloudkill (DC 23)", 
+                "elemental body II", 
+                "summon monster V", 
+                "teleport "
+            ], 
+            "1st (7/day)": [
+                "burning hands (cold) (DC 18)", 
+                "charm person (DC 19)", 
+                "disguise self", 
+                "feather fall", 
+                "mage armor (already cast)", 
+                "magic missile"
+            ], 
+            "6th (5/day)": [
+                "acid fog", 
+                "elemental body III", 
+                "summon monster VI"
+            ], 
+            "2nd (8/day)": [
+                "acid arrow", 
+                "darkness", 
+                "detect thoughts (DC 19)", 
+                "glitterdust (DC 20)", 
+                "scorching ray (cold)", 
+                "web (DC 20)"
+            ], 
+            "4th (6/day)": [
+                "charm monster (DC 22)", 
+                "confusion (DC 22)", 
+                "elemental body I", 
+                "fear (DC 21)", 
+                "stoneskin (already cast)"
+            ], 
+            "3rd (8/day)": [
+                "displacement", 
+                "hold person (DC 21)", 
+                "protection from energy", 
+                "stinking cloud (DC 21)", 
+                "summon monster III"
+            ]
+        }, 
+        "caster_level": 13
+    }, 
+    {
+        "name": "Young Lunar Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "mage hand", 
+                "read magic"
+            ], 
+            "1st (4/day)": [
+                "comprehend languages", 
+                "mage armor"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Lunar Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 12, 
+        "spells": {
+            "0 (at will)": [
+                "arcane mark", 
+                "detect magic", 
+                "light", 
+                "mage hand", 
+                "prestidigitation", 
+                "read magic", 
+                "resistance"
+            ], 
+            "1st (7/day)": [
+                "comprehend languages", 
+                "mage armor", 
+                "protection from evil", 
+                "shocking grasp", 
+                "vanish"
+            ], 
+            "3rd (3/day)": [
+                "haste", 
+                "heroism"
+            ], 
+            "2nd (5/day)": [
+                "blur", 
+                "hypnotic pattern (DC 17)", 
+                "mirror image"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Lunar Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 22, 
+        "spells": {
+            "7th (5/day)": [
+                "greater teleport", 
+                "waves of exhaustion"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "read magic", 
+                "4 more"
+            ], 
+            "5th (7/day)": [
+                "dominate person (DC 22)", 
+                "feeblemind (DC 22)", 
+                "fire snake (DC 22)", 
+                "mage's private sanctum"
+            ], 
+            "6th (7/day)": [
+                "cold ice strike (DC 23)", 
+                "greater dispel magic", 
+                "true seeing"
+            ], 
+            "2nd (8/day)": [
+                "bear's endurance", 
+                "detect thoughts (DC 19)", 
+                "hypnotic pattern (DC 19)", 
+                "minor image (DC 19)", 
+                "mirror image"
+            ], 
+            "4th (7/day)": [
+                "charm monster (DC 21)", 
+                "fire shield", 
+                "greater invisibility", 
+                "lesser globe of invulnerability"
+            ], 
+            "1st (8/day)": [
+                "comprehend languages", 
+                "mage armor", 
+                "protection from evil", 
+                "shocking grasp", 
+                "vanish"
+            ], 
+            "3rd (8/day)": [
+                "haste", 
+                "heroism", 
+                "tongues", 
+                "vampiric touch"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Solar Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 13)", 
+                "detect poison", 
+                "flare (DC 13)", 
+                "read magic"
+            ], 
+            "1st (4/day)": [
+                "color spray (DC 14)", 
+                "mage armor"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Solar Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 12, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 15)", 
+                "detect poison", 
+                "flare (DC 15)", 
+                "light", 
+                "mage hand", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "2nd (7/day)": [
+                "invisibility", 
+                "resist energy", 
+                "scorching ray"
+            ], 
+            "1st (8/day)": [
+                "charm person (DC 16)", 
+                "color spray (DC 16)", 
+                "mage armor", 
+                "magic missile", 
+                "shield"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "tongues"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Solar Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 22, 
+        "spells": {
+            "7th (5/day)": [
+                "control weather", 
+                "plane shift (DC 24)"
+            ], 
+            "0 (at will)": [
+                "detect poison", 
+                "mage hand", 
+                "read magic", 
+                "6 more"
+            ], 
+            "5th (7/day)": [
+                "break enchantment", 
+                "dismissal (DC 22)", 
+                "dominate person (DC 23)", 
+                "wall of force"
+            ], 
+            "6th (7/day)": [
+                "chain lightning (DC 23)", 
+                "greater dispel magic", 
+                "mislead"
+            ], 
+            "2nd (8/day)": [
+                "continual flame", 
+                "invisibility", 
+                "resist energy", 
+                "scorching ray", 
+                "see invisibility"
+            ], 
+            "4th (7/day)": [
+                "charm monster (DC 22)", 
+                "dimension door", 
+                "fear (DC 21)", 
+                "greater invisibility"
+            ], 
+            "1st (8/day)": [
+                "charm person (DC 19)", 
+                "color spray (DC 18)", 
+                "mage armor", 
+                "magic missile", 
+                "shield"
+            ], 
+            "3rd (8/day)": [
+                "dispel magic", 
+                "lightning bolt (DC 20)", 
+                "protection from energy", 
+                "tongues"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Time Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 3, 
+        "spells": {
+            "0 (at will)": [
+                "mage hand", 
+                "message", 
+                "read magic", 
+                "resistance"
+            ], 
+            "1st (4/day)": [
+                "erase", 
+                "mage armor"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Time Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 11, 
+        "spells": {
+            "0 (at will)": [
+                "light", 
+                "mage hand", 
+                "message", 
+                "read magic", 
+                "3 more"
+            ], 
+            "2nd (7/day)": [
+                "arcane lock", 
+                "blur", 
+                "detect thoughts (DC 16)"
+            ], 
+            "1st (7/day)": [
+                "erase", 
+                "feather fall", 
+                "identify", 
+                "mage armor", 
+                "magic missile"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "slow (DC 17)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Time Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 21, 
+        "spells": {
+            "0 (at will)": [
+                "light", 
+                "mage hand", 
+                "message", 
+                "read magic", 
+                "5 more"
+            ], 
+            "5th (7/day)": [
+                "dominate person (DC 21)", 
+                "feeblemind (DC 21)", 
+                "telepathic bond", 
+                "teleport"
+            ], 
+            "6th (7/day)": [
+                "disintegrate (DC 22)", 
+                "greater dispel magic", 
+                "true seeing"
+            ], 
+            "3rd (7/day)": [
+                "blink", 
+                "dispel magic", 
+                "slow (DC 19)", 
+                "tongues"
+            ], 
+            "2nd (8/day)": [
+                "arcane lock", 
+                "blindness/deafness (DC 18)", 
+                "blur", 
+                "detect thoughts (DC 18)", 
+                "memory lapse (DC 18)"
+            ], 
+            "4th (7/day)": [
+                "fear (DC 20)", 
+                "scrying (DC 20)", 
+                "stone shape", 
+                "stoneskin"
+            ], 
+            "7th (4/day)": [
+                "plane shift (DC 23)", 
+                "sequester"
+            ], 
+            "1st (8/day)": [
+                "erase", 
+                "feather fall", 
+                "identify", 
+                "mage armor", 
+                "magic missile"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Void Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "mage hand", 
+                "message", 
+                "read magic"
+            ], 
+            "1st (4/day)": [
+                "hypnotism (DC 15)", 
+                "mage armor"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Void Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 12, 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "mage hand", 
+                "read magic", 
+                "4 more"
+            ], 
+            "2nd (7/day)": [
+                "invisibility", 
+                "resist energy", 
+                "touch of idiocy (DC 17)"
+            ], 
+            "1st (8/day)": [
+                "alarm", 
+                "cause fear (DC 17)", 
+                "hypnotism (DC 17)", 
+                "mage armor", 
+                "obscuring mist"
+            ], 
+            "3rd (5/day)": [
+                "dispel magic", 
+                "lightning bolt (DC 18)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Void Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 22, 
+        "spells": {
+            "7th (5/day)": [
+                "prismatic spray (DC 24)", 
+                "vision"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "mage hand", 
+                "read magic", 
+                "6 more"
+            ], 
+            "5th (7/day)": [
+                "break enchantment", 
+                "dismissal (DC 22)", 
+                "dominate person (DC 22)", 
+                "feeblemind (DC 22)"
+            ], 
+            "6th (7/day)": [
+                "disintegrate (DC 23)", 
+                "eyebite (DC 23)", 
+                "shadow walk"
+            ], 
+            "4th (7/day)": [
+                "charm monster (DC 21)", 
+                "confusion (DC 21)", 
+                "dimensional anchor", 
+                "scrying (DC 21)"
+            ], 
+            "2nd (7/day)": [
+                "invisibility", 
+                "locate object", 
+                "resist energy", 
+                "touch of idiocy (DC 19)", 
+                "share memory (DC 19)"
+            ], 
+            "1st (8/day)": [
+                "alarm", 
+                "cause fear (DC 18)", 
+                "hypnotism (DC 18)", 
+                "mage armor", 
+                "obscuring mist"
+            ], 
+            "3rd (8/day)": [
+                "dispel magic", 
+                "haste", 
+                "heroism", 
+                "lightning bolt (DC 20)"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Vortex Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "arcane mark", 
+                "detect magic", 
+                "message", 
+                "read magic"
+            ], 
+            "1st (4/day)": [
+                "feather fall", 
+                "true strike"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Vortex Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 12, 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "message", 
+                "read magic", 
+                "3 more"
+            ], 
+            "2nd (7/day)": [
+                "mirror image", 
+                "resist energy", 
+                "scorching ray"
+            ], 
+            "1st (8/day)": [
+                "comprehend languages", 
+                "feather fall", 
+                "magic missile", 
+                "obscuring mist", 
+                "true strike"
+            ], 
+            "3rd (5/day)": [
+                "displacement", 
+                "protection from energy"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Vortex Dragon", 
+        "type": "Sorcerer", 
+        "concentration": 22, 
+        "spells": {
+            "7th (5/day)": [
+                "forcecage (DC 24)", 
+                "spell turning"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "light", 
+                "message", 
+                "read magic", 
+                "5 more"
+            ], 
+            "5th (7/day)": [
+                "dream", 
+                "passwall", 
+                "telekinesis", 
+                "wall of force"
+            ], 
+            "6th (7/day)": [
+                "forceful hand", 
+                "shadow walk (DC 23)", 
+                "true seeing"
+            ], 
+            "2nd (8/day)": [
+                "cat's grace", 
+                "mirror image", 
+                "obscure object", 
+                "resist energy", 
+                "scorching ray"
+            ], 
+            "4th (7/day)": [
+                "fear (DC 21)", 
+                "scrying (DC 21)", 
+                "solid fog", 
+                "stoneskin"
+            ], 
+            "1st (8/day)": [
+                "feather fall", 
+                "identify", 
+                "mage armor", 
+                "magic missile", 
+                "true strike"
+            ], 
+            "3rd (8/day)": [
+                "dispel magic", 
+                "haste", 
+                "nondetection", 
+                "tongues"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Cernunnos", 
+        "type": "Druid", 
+        "concentration": 26, 
+        "spells": {
+            "3rd": [
+                "call lightning (DC 19)", 
+                "cure moderate wounds", 
+                "neutralize poison (2)", 
+                "remove disease"
+            ], 
+            "6th": [
+                "antilife shell", 
+                "greater dispel magic (2)", 
+                "move earth", 
+                "wall of stone (DC 22)"
+            ], 
+            "5th": [
+                "atonement", 
+                "baleful polymorph (DC 21)", 
+                "deathward", 
+                "transmute rock to mud", 
+                "wall of thorns"
+            ], 
+            "2nd": [
+                "chill metal (DC 18)", 
+                "fog cloud", 
+                "heat metal (DC 18)", 
+                "lesser restoration", 
+                "resist energy (2)"
+            ], 
+            "0": [
+                "create water", 
+                "mending", 
+                "purify food and drink", 
+                "read magic"
+            ], 
+            "4th": [
+                "cure serious wounds (2)", 
+                "freedom of movement", 
+                "rusting grasp", 
+                "true form (DC 20)"
+            ], 
+            "9th": [
+                "elemental swarm", 
+                "foresight", 
+                "summon nature's ally IX (2)"
+            ], 
+            "1st": [
+                "calm animals (DC 17, 2)", 
+                "cure light wounds (2)", 
+                "pass without trace (2)"
+            ], 
+            "7th": [
+                "control weather", 
+                "creeping doom (DC 23)", 
+                "heal", 
+                "sunbeam (DC 23)"
+            ], 
+            "8th": [
+                "control plants (DC 24)", 
+                "repel metal or stone", 
+                "sunburst (DC 24)", 
+                "whirlwind (DC 24)"
+            ]
+        }, 
+        "caster_level": 20
+    }, 
+    {
+        "name": "Vildeis", 
+        "type": "Paladin", 
+        "concentration": 25, 
+        "spells": {
+            "1st": [
+                "divine favor (3)", 
+                "hero's defiance", 
+                "lesser restoration (2)"
+            ], 
+            "4th": [
+                "blaze of glory (DC 19)", 
+                "break enchantment", 
+                "death ward", 
+                "king's castle"
+            ], 
+            "3rd": [
+                "dispel magic", 
+                "fires of judgment (DC 18)", 
+                "prayer", 
+                "righteous vigor"
+            ], 
+            "2nd": [
+                "bull's strength", 
+                "corruption resistance", 
+                "litany of wardingUC", 
+                "remove paralysis", 
+                "shield other"
+            ]
+        }, 
+        "caster_level": 20
+    }, 
+    {
+        "name": "Fungal Nymph", 
+        "type": "Druid", 
+        "concentration": 10, 
+        "spells": {
+            "1st": [
+                "entangle (DC 14)", 
+                "faerie fire", 
+                "obscuring mist", 
+                "pass without trace", 
+                "produce flame"
+            ], 
+            "0": [
+                "detect magic", 
+                "guidance", 
+                "resistance", 
+                "virtue"
+            ], 
+            "4th": [
+                "command plants (DC 17)"
+            ], 
+            "3rd": [
+                "call lightning (DC 16)", 
+                "speak with plants", 
+                "spike growth (DC 16)"
+            ], 
+            "2nd": [
+                "chill metal (DC 15)", 
+                "flame blade", 
+                "resist energy", 
+                "summon swarm"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Gathlain", 
+        "bloodline": "Spell", 
+        "type": "Sorcerer", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "daze (DC 15)", 
+                "ghost sound (DC 13)", 
+                "ray of frost"
+            ], 
+            "1st (4/day)": [
+                "color spray (DC 14)", 
+                "magic missile"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Kitsune", 
+        "bloodline": "Spell", 
+        "type": "Sorcerer", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "daze", 
+                "detect magic", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "1st (4/day)": [
+                "charm person (DC 15)", 
+                "sleep (DC 17)"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Lampad", 
+        "type": "Druid", 
+        "concentration": 8, 
+        "spells": {
+            "0": [
+                "detect magic", 
+                "detect poison", 
+                "light", 
+                "mending"
+            ], 
+            "1st": [
+                "cure light wounds", 
+                "faerie fire", 
+                "magic stone"
+            ], 
+            "3rd": [
+                "stone shape"
+            ], 
+            "2nd": [
+                "spider climb", 
+                "stone call"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Morrigna", 
+        "type": "Inquisitor", 
+        "concentration": 15, 
+        "spells": {
+            "3rd (5)": [
+                "blood biography (DC 16)", 
+                "dimensional anchor", 
+                "dispel magic", 
+                "halt undead (DC 16)"
+            ], 
+            "2nd (6)": [
+                "confess (DC 15)", 
+                "detect thoughts (DC 15)", 
+                "hold person (DC 15)", 
+                "invisibility", 
+                "see invisibility"
+            ], 
+            "0": [
+                "bleed (DC 13)", 
+                "detect magic", 
+                "disrupt undead", 
+                "read magic", 
+                "sift", 
+                "stabilize"
+            ], 
+            "1st (6)": [
+                "bane (DC 14)", 
+                "command (DC 14)", 
+                "comprehend languages", 
+                "expeditious retreat", 
+                "sanctuary (DC 14)", 
+                "wrath"
+            ], 
+            "4th (3)": [
+                "cure critical wounds", 
+                "divination", 
+                "freedom of movement", 
+                "spell immunity"
+            ]
+        }, 
+        "caster_level": 12
+    }, 
+    {
+        "name": "Rokurokubi", 
+        "type": "Sorcerer", 
+        "concentration": 17, 
+        "spells": {
+            "6th (3)": [
+                "permanent image (DC 21)"
+            ], 
+            "3rd (7)": [
+                "dispel magic", 
+                "fly", 
+                "keen edge", 
+                "wind wall"
+            ], 
+            "0 (at will)": [
+                "arcane mark", 
+                "detect magic", 
+                "detect poison", 
+                "ghost sound (DC 15)", 
+                "mage hand", 
+                "message", 
+                "open/close", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "1st (8)": [
+                "charm person (DC 16)", 
+                "disguise self", 
+                "obscuring mist", 
+                "shocking grasp", 
+                "sleep (DC 16)"
+            ], 
+            "4th (7)": [
+                "charm monster (DC 19)", 
+                "confusion(DC 19)", 
+                "locate creature"
+            ], 
+            "5th (6)": [
+                "feeblemind (DC 20)", 
+                "nightmare (DC 20)"
+            ], 
+            "2nd (7)": [
+                "ghoul touch (DC 17)", 
+                "invisibility", 
+                "knock", 
+                "touch of idiocy"
+            ]
+        }, 
+        "caster_level": 12
+    }, 
+    {
+        "mystery": "lore", 
+        "name": "Samsaran", 
+        "type": "Oracle", 
+        "concentration": 3, 
+        "spells": {
+            "0 (at will)": [
+                "ghost sound (DC 12)", 
+                "guidance", 
+                "light", 
+                "mage hand", 
+                "read magic", 
+                "resistance"
+            ], 
+            "1st (4/day)": [
+                "command (DC 13)", 
+                "cure light wounds", 
+                "sanctuary (DC 13)"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Soulbound Shell", 
+        "type": "Wizard", 
+        "concentration": 17, 
+        "spells": {
+            "3rd": [
+                "fly", 
+                "lightning bolt (2, DC 18)", 
+                "stinking cloud (2, DC 20)"
+            ], 
+            "6th": [
+                "beast shape IV", 
+                "disintegrate (DC 21)"
+            ], 
+            "5th": [
+                "cloudkill (2, DC 22)", 
+                "dominate person (DC 21)", 
+                "passwall"
+            ], 
+            "2nd": [
+                "false life (already cast)", 
+                "glitterdust (DC 19)", 
+                "hideous laughter (DC 18)", 
+                "make whole", 
+                "mirror image"
+            ], 
+            "0": [
+                "acid splash", 
+                "detect magic", 
+                "mage hand", 
+                "read magic"
+            ], 
+            "4th": [
+                "black tentacles (2)", 
+                "fire shield", 
+                "shout (DC 19)"
+            ], 
+            "1st": [
+                "charm person (2, DC 17)", 
+                "expeditious retreat", 
+                "grease (DC 18)", 
+                "mage armor (already cast)", 
+                "unseen servant"
+            ]
+        }, 
+        "caster_level": 12
+    }, 
+    {
+        "name": "Wayang", 
+        "type": "Illusionist", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "detect magic", 
+                "ghost sound (DC 13)", 
+                "read magic"
+            ], 
+            "1st": [
+                "hypnotism (DC 14)", 
+                "silent image (DC 14)", 
+                "vanish"
+            ]
+        }, 
+        "opposition_schools": [
+            "necromancy", 
+            "transmutation"
+        ], 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Wyvaran", 
+        "type": "Inquisitor", 
+        "domains": [
+            "Spell"
+        ], 
+        "concentration": 3, 
+        "spells": {
+            "1st (2/day)": [
+                "cause fear (DC 15)", 
+                "shield of faith"
+            ], 
+            "0 (at will)": [
+                "acid splash", 
+                "daze (DC 14)", 
+                "disrupt undead", 
+                "guidance"
+            ]
+        }, 
+        "caster_level": 1
+    }
+]

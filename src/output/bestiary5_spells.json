@@ -1,0 +1,1125 @@
+[
+    {
+        "name": "Empyrean", 
+        "type": "Cleric", 
+        "concentration": 30, 
+        "spells": {
+            "3rd": [
+                "daylight", 
+                "invisibility purge", 
+                "locate object", 
+                "prayer", 
+                "stone shape", 
+                "wind wall"
+            ], 
+            "6th": [
+                "heal (DC 26)", 
+                "heroes' feast", 
+                "joyful rapture", 
+                "quickened silence (DC 22)", 
+                "wind walk", 
+                "word of recall"
+            ], 
+            "5th": [
+                "breath of life", 
+                "quickened divine favor", 
+                "fickle winds", 
+                "greater command (DC 25)", 
+                "plane shift (DC 25)", 
+                "serenity (DC 25)"
+            ], 
+            "2nd": [
+                "consecrate", 
+                "find traps", 
+                "grace (2)", 
+                "make whole", 
+                "remove paralysis", 
+                "silence (DC 22)"
+            ], 
+            "0": [
+                "create water", 
+                "detect magic", 
+                "guidance", 
+                "purify food and drink"
+            ], 
+            "4th": [
+                "death ward", 
+                "dismissal (DC 24)", 
+                "divine power", 
+                "freedom of movement", 
+                "greater magic weapon (2)"
+            ], 
+            "9th": [
+                "gate", 
+                "mass heal (DC 29)", 
+                "miracle", 
+                "overwhelming presence(DC 29)", 
+                "quickened righteous might"
+            ], 
+            "1st": [
+                "bless", 
+                "divine favor", 
+                "endure elements", 
+                "obscuring mist (2)", 
+                "remove sickness", 
+                "shield of faith"
+            ], 
+            "7th": [
+                "control weather", 
+                "holy word (DC 27)", 
+                "greater scrying (DC 27)", 
+                "repulsion (DC 27)", 
+                "waves of ecstasy (DC 27)"
+            ], 
+            "8th": [
+                "antimagic field", 
+                "discern location", 
+                "quickened divine power", 
+                "greater spell immunity", 
+                "holy aura (DC 28)"
+            ]
+        }, 
+        "caster_level": 20
+    }, 
+    {
+        "name": "Apkallu", 
+        "type": "Oracle", 
+        "concentration": 28, 
+        "spells": {
+            "5th (8/day)": [
+                "greater command (DC 24)", 
+                "greater forbid action (DC 24)", 
+                "mass cure light wounds (DC 24)", 
+                "wall of stone"
+            ], 
+            "0 (at will)": [
+                "create water", 
+                "detect magic", 
+                "detect poison", 
+                "guidance", 
+                "light", 
+                "mending", 
+                "purify food and drink", 
+                "read magic", 
+                "stabilize"
+            ], 
+            "8th (7/day)": [
+                "dimensional lock", 
+                "mass cure critical wounds (DC 27)", 
+                "shield of law"
+            ], 
+            "6th (7/day)": [
+                "geas/quest", 
+                "greater dispel magic", 
+                "heal"
+            ], 
+            "1st (9/day)": [
+                "comprehend languages", 
+                "divine favor", 
+                "obscuring mist", 
+                "sanctuary (DC 20)", 
+                "shield of faith"
+            ], 
+            "7th (7/day)": [
+                "destruction (DC 26)", 
+                "dictum", 
+                "repulsion (DC 26)"
+            ], 
+            "2nd (8/day)": [
+                "calm emotions (DC 21)", 
+                "hold person (DC 21)", 
+                "silence (DC 21)", 
+                "sound burst (DC 21)", 
+                "zone of truth (DC 21)"
+            ], 
+            "4th (8/day)": [
+                "dimensional anchor", 
+                "divination", 
+                "restoration", 
+                "sending"
+            ], 
+            "9th (5/day)": [
+                "miracle", 
+                "overwhelming presence (DC 28)"
+            ], 
+            "3rd (8/day)": [
+                "create food and water", 
+                "invisibility purge", 
+                "speak with dead (DC 22)", 
+                "wind wall"
+            ]
+        }, 
+        "caster_level": 19
+    }, 
+    {
+        "name": "Gate Archon", 
+        "type": "Cleric", 
+        "concentration": 23, 
+        "spells": {
+            "3rd": [
+                "daylight", 
+                "dispel magic", 
+                "prayer (2)", 
+                "searing light"
+            ], 
+            "6th": [
+                "antilife shell", 
+                "banishment (2, DC 22)", 
+                "blade barrier (DC 21)", 
+                "greater dispel magic", 
+                "heal"
+            ], 
+            "5th": [
+                "break enchantment (2)", 
+                "breath of life", 
+                "dispel evil (DC 20)", 
+                "righteous might", 
+                "wall of stone"
+            ], 
+            "2nd": [
+                "calm emotions (DC 17)", 
+                "consecrate", 
+                "eagle's splendor", 
+                "owl's wisdom", 
+                "remove paralysis", 
+                "silence (DC 17)"
+            ], 
+            "0": [
+                "detect magic", 
+                "guidance", 
+                "light", 
+                "stabilize"
+            ], 
+            "4th": [
+                "blessing of fervor", 
+                "divine power", 
+                "freedom of movement", 
+                "greater magic weapon", 
+                "neutralize poison"
+            ], 
+            "9th": [
+                "mass heal (DC 24)"
+            ], 
+            "1st": [
+                "divine favor", 
+                "entropic shield", 
+                "obscuring mist", 
+                "protection from evil", 
+                "remove fear", 
+                "shield of faith"
+            ], 
+            "7th": [
+                " greater scrying (DC 22)", 
+                "holy word (2, DC 22)"
+            ], 
+            "8th": [
+                "dimensional lock", 
+                "greater spell immunity"
+            ]
+        }, 
+        "caster_level": 17
+    }, 
+    {
+        "name": "Astomoi", 
+        "type": "Psychic", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "daze (DC 13)", 
+                "flare (DC 13)", 
+                "grave words", 
+                "telekinetic projectile"
+            ], 
+            "1st (4/day)": [
+                "expeditious retreat", 
+                "mind thrust I(DC 14)", 
+                "summon monster I"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Raelis", 
+        "type": "Sorcerer", 
+        "concentration": 15, 
+        "spells": {
+            "5th (4/day)": [
+                "seeming", 
+                "sending", 
+                "symbol of pain (DC 20)", 
+                "symbol of sleep (DC 20)"
+            ], 
+            "0 (at will)": [
+                "arcane mark", 
+                "dancing lights", 
+                "detect magic", 
+                "detect poison", 
+                "light", 
+                "mage hand", 
+                "message", 
+                "prestidigitation", 
+                "read magic"
+            ], 
+            "3rd (7/day)": [
+                "beast shape I", 
+                "explosive runes (DC 18)", 
+                "glyph of warding (DC 18)", 
+                "haste", 
+                "lightning bolt (DC 17)", 
+                "sepia snake sigil (DC 18)", 
+                "suggestion (DC 17)"
+            ], 
+            "1st (7/day)": [
+                "erase", 
+                "feather fall", 
+                "hypnotism", 
+                "silent image (DC 15)", 
+                "ventriloquism (DC 15)"
+            ], 
+            "4th (7/day)": [
+                "confusion (DC 18)", 
+                "greater invisibility", 
+                "scrying (DC 18)"
+            ], 
+            "2nd (7/day)": [
+                "detect thoughts (DC 16)", 
+                "hypnotic pattern (DC 16)", 
+                "invisibility", 
+                "scorching ray", 
+                "see invisibility"
+            ]
+        }, 
+        "caster_level": 11
+    }, 
+    {
+        "name": "Deep One Hybrid", 
+        "type": "Cleric", 
+        "domains": [
+            "Chaos", 
+            "Madness"
+        ], 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 13)", 
+                "light", 
+                "resistance"
+            ], 
+            "1st": [
+                "cause fear (DC 14)", 
+                "cure light wounds", 
+                "lesser confusionD (DC 14)"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Young Astral Dragon", 
+        "type": "Psychic", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "daze (DC 13)", 
+                "detect magic", 
+                "mage hand", 
+                "open/close"
+            ], 
+            "1st (4/day)": [
+                " burst of insight", 
+                "sundering shards (DC 14)"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Astral Dragon", 
+        "type": "Psychic", 
+        "concentration": 12, 
+        "spells": {
+            "0 (at will)": [
+                "dancing lights", 
+                "daze (DC 15)", 
+                "detect magic", 
+                "detect poison", 
+                "mage hand", 
+                "message", 
+                "open/close"
+            ], 
+            "2nd (7/day)": [
+                "blur", 
+                "hideous laughter (DC 17)", 
+                "locate object"
+            ], 
+            "1st (8/day)": [
+                "burst of insight", 
+                "feather fall", 
+                "sundering shards(DC 16)", 
+                "true strike", 
+                "unwitting ally(DC 16)"
+            ], 
+            "3rd (5/day)": [
+                "ego whip I", 
+                "haste"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Astral Dragon", 
+        "type": "Psychic", 
+        "concentration": 22, 
+        "spells": {
+            "7th (5/day)": [
+                "insanity (DC 24)", 
+                "repulsion (DC 24)"
+            ], 
+            "0 (at will)": [
+                "dancing lights", 
+                "daze (DC 17)", 
+                "detect magic", 
+                "detect psychic significance", 
+                "know direction", 
+                "mage hand", 
+                "message", 
+                "open/close", 
+                "virtue"
+            ], 
+            "5th (7/day)": [
+                "dismissal (DC 22)", 
+                "remote viewing", 
+                "wall of force", 
+                "waves of fatigue (DC 22)"
+            ], 
+            "6th (7/day)": [
+                "blade barrier (DC 23)", 
+                "disintegrate (DC 23)", 
+                "create mindscape"
+            ], 
+            "2nd (8/day)": [
+                "hideous laughter (DC 19)", 
+                "hypercognition", 
+                "locate object", 
+                "mirror image", 
+                "touch of idiocy"
+            ], 
+            "4th (7/day)": [
+                "greater false life", 
+                "lesser globe of invulnerability", 
+                "spell immunity", 
+                "telekinetic charge"
+            ], 
+            "1st (8/day)": [
+                "burst of insight", 
+                "feather fall", 
+                "sundering shards(DC 18)", 
+                "true strike", 
+                "unwitting ally(DC 18)"
+            ], 
+            "3rd (8/day)": [
+                "displacement", 
+                "ego whip I(DC 20)", 
+                "haste", 
+                "major image (DC 20)"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Dream Dragon", 
+        "type": "Psychic", 
+        "concentration": 5, 
+        "spells": {
+            "1st (4/day)": [
+                "shield", 
+                "sleep (DC 15)"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Dream Dragon", 
+        "type": "Psychic", 
+        "concentration": 12, 
+        "spells": {
+            "0 (at will)": [
+                "dancing light", 
+                "daze (DC 15)", 
+                "detect magic", 
+                "ghost sound (DC 15)", 
+                "mage hand", 
+                "message", 
+                "resistance"
+            ], 
+            "2nd (7/day)": [
+                "aversion(DC 17)", 
+                "calm emotions (DC 17)", 
+                "mind thrust II"
+            ], 
+            "1st (8/day)": [
+                "blurred movement", 
+                "color spray (DC 16)", 
+                "shield", 
+                "sleep (DC 16)", 
+                "true strike"
+            ], 
+            "3rd (5/day)": [
+                "clairaudience/clairvoyance", 
+                "deep slumber (DC 18)"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Dream Dragon", 
+        "type": "Psychic", 
+        "concentration": 22, 
+        "spells": {
+            "5th (7/day)": [
+                "dismissal (DC 22)", 
+                "major creation", 
+                "wall of force", 
+                "waves of fatigue"
+            ], 
+            "7th (5/day)": [
+                "limited wish", 
+                "waves of exhaustion"
+            ], 
+            "6th (7/day)": [
+                "cloak of dreams (DC 23)", 
+                "dream council", 
+                "mental barrier V"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Young Etheric Dragon", 
+        "type": "Psychic", 
+        "concentration": 9, 
+        "spells": {
+            "1st (7/day)": [
+                "anticipate peril", 
+                "detect thoughts (DC 14)", 
+                "magic missile", 
+                "shield"
+            ], 
+            "2nd (5/day)": [
+                "blindness/deafness (DC 15)", 
+                "false life"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Adult Etheric Dragon", 
+        "type": "Psychic", 
+        "concentration": 9, 
+        "spells": {
+            "1st (7/day)": [
+                "anticipate peril", 
+                "detect thoughts (DC 14)", 
+                "magic missile", 
+                "shield"
+            ], 
+            "2nd (5/day)": [
+                "blindness/deafness (DC 15)", 
+                "false life"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Ancient Etheric Dragon", 
+        "type": "Psychic", 
+        "concentration": 19, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 15)", 
+                "dancing lights", 
+                "daze (DC 15)", 
+                "detect magic", 
+                "detect poison", 
+                "ghost sound (DC 15)", 
+                "grave words", 
+                "resistance", 
+                "virtue"
+            ], 
+            "5th (7/day)": [
+                "hold monster (DC 20)", 
+                "plane shift (DC 20)", 
+                "wall of ectoplasm(DC 20)"
+            ], 
+            "3rd (7/day)": [
+                "aura sight", 
+                "deep slumber (DC 18)", 
+                "heroism", 
+                "thought shield II"
+            ], 
+            "6th (5/day)": [
+                "contingency", 
+                "heroism (greater)"
+            ], 
+            "2nd (8/day)": [
+                "blindness/deafness (DC 17)", 
+                "false life", 
+                "pain strike", 
+                "see invisibility", 
+                "silence (DC 17)"
+            ], 
+            "4th (7/day)": [
+                "arcane eye", 
+                "condensed ether", 
+                "dimension door", 
+                "phantasmal killer (DC 19)"
+            ], 
+            "1st (8/day)": [
+                "anticipate peril", 
+                "detect thoughts (DC 16)", 
+                "shield", 
+                "silent image (DC 16)", 
+                "magic missile"
+            ]
+        }, 
+        "caster_level": 13
+    }, 
+    {
+        "name": "Young Nightmare Dragon", 
+        "type": "Psychic", 
+        "concentration": 8, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 13)", 
+                "dancing lights", 
+                "daze (DC 13)", 
+                "detect psychic significance", 
+                "lullaby (DC 13)", 
+                "resistance"
+            ], 
+            "1st (7/day)": [
+                "command (DC 14)", 
+                "detect thoughts", 
+                "ill omen", 
+                "unwitting ally (DC 14)"
+            ], 
+            "2nd (5/day)": [
+                "mirror image", 
+                "scare (DC 15)"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Adult Nightmare Dragon", 
+        "type": "Psychic", 
+        "concentration": 8, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 13)", 
+                "dancing lights", 
+                "daze (DC 13)", 
+                "detect psychic significance", 
+                "lullaby (DC 13)", 
+                "resistance"
+            ], 
+            "1st (7/day)": [
+                "command (DC 14)", 
+                "detect thoughts", 
+                "ill omen", 
+                "unwitting ally (DC 14)"
+            ], 
+            "2nd (5/day)": [
+                "mirror image", 
+                "scare (DC 15)"
+            ]
+        }, 
+        "caster_level": 5
+    }, 
+    {
+        "name": "Ancient Nightmare Dragon", 
+        "type": "Psychic", 
+        "concentration": 18, 
+        "spells": {
+            "6th (4/day)": [
+                "dream travel", 
+                "greater dispel magic"
+            ], 
+            "0 (at will)": [
+                "bleed (DC 15)", 
+                "dancing lights", 
+                "daze (DC 15)", 
+                "detect magic", 
+                "detect psychic significance", 
+                "lullaby (DC 15)", 
+                "resistance", 
+                "telekinetic projectile"
+            ], 
+            "5th (7/day)": [
+                "dream scan", 
+                "ego whip III", 
+                "erase impressions"
+            ], 
+            "3rd (7/day)": [
+                "deep slumber (DC 18)", 
+                "major image (DC 18)", 
+                "vision of Hell", 
+                "wall of nausea"
+            ], 
+            "4th (7/day)": [
+                "agonize (DC 19)", 
+                "crushing despair (DC 19)", 
+                "phantasmal killer (DC 19)", 
+                "stoneskin"
+            ], 
+            "2nd (7/day)": [
+                "haunting mists", 
+                "mind thrust II", 
+                "mirror image", 
+                "scare (DC 17)", 
+                "touch of idiocy"
+            ], 
+            "1st (8/day)": [
+                "command (DC 16)", 
+                "compel hostility", 
+                "detect thoughts (DC 16)", 
+                "ill omen", 
+                "unwitting ally (DC 16)"
+            ]
+        }, 
+        "caster_level": 13
+    }, 
+    {
+        "name": "Young Occult Dragon", 
+        "type": "Psychic", 
+        "concentration": 4, 
+        "spells": {
+            "1st (4/day)": [
+                "mage armor", 
+                "sleep (DC 14)"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Adult Occult Dragon", 
+        "type": "Psychic", 
+        "concentration": 12, 
+        "spells": {
+            "2nd (7/day)": [
+                "hideous laughter (DC 15)", 
+                "protection from arrows", 
+                "suggestion (DC 17)"
+            ], 
+            "1st (8/day)": [
+                "burst of adrenaline", 
+                "burst of insight", 
+                "interrogation (DC 16)", 
+                "mage armor", 
+                "sleep (DC 16)"
+            ], 
+            "3rd (5/day)": [
+                "gaseous form", 
+                "mental barrier II"
+            ]
+        }, 
+        "caster_level": 7
+    }, 
+    {
+        "name": "Ancient Occult Dragon", 
+        "type": "Psychic", 
+        "concentration": 22, 
+        "spells": {
+            "7th (5/day)": [
+                "greater teleport", 
+                "limited wish"
+            ], 
+            "0 (at will)": [
+                "detect poison", 
+                "ghost sound (DC 17)", 
+                "grave words", 
+                "mage hand", 
+                "message", 
+                "read magic", 
+                "resistance", 
+                "telekinetic projectile", 
+                "virtue"
+            ], 
+            "5th (7/day)": [
+                "dismissal (DC 22)", 
+                "mind fog (DC 22)", 
+                "psychic crush I", 
+                "synapse overload"
+            ], 
+            "6th (7/day)": [
+                "blade barrier (DC 23)", 
+                "permanent image (DC 23)", 
+                "repress memory"
+            ], 
+            "2nd (8/day)": [
+                "hideous laughter (DC 19)", 
+                "hold person (DC 19)", 
+                "protection from arrows", 
+                "suggestion (DC 19)", 
+                "zone of truth (DC 19)"
+            ], 
+            "4th (7/day)": [
+                "confusion (DC 21)", 
+                "dimension door", 
+                "dream", 
+                "spell immunity"
+            ], 
+            "1st (8/day)": [
+                "burst of adrenaline", 
+                "charm person (DC 18)", 
+                "burst of insight", 
+                "interrogation (DC 18)", 
+                "mage armor"
+            ], 
+            "3rd (8/day)": [
+                "clairaudience/clairvoyance", 
+                "gaseous form", 
+                "mental barrier II", 
+                "speak with dead", 
+                "(DC 20)"
+            ]
+        }, 
+        "caster_level": 15
+    }, 
+    {
+        "name": "Fastachee", 
+        "type": "Druid", 
+        "domains": [
+            "Spell"
+        ], 
+        "concentration": 17, 
+        "spells": {
+            "3rd": [
+                "aqueous orb (DC 20)", 
+                "call lightning (DC 19)", 
+                "cure serious woundsD", 
+                "protection from energy", 
+                "remove disease", 
+                "spike growth (DC 19)"
+            ], 
+            "6th": [
+                "greater dispel magic", 
+                "healD", 
+                "mass bear's endurance"
+            ], 
+            "5th": [
+                "baleful polymorph (DC 21)", 
+                "breath of lifeD", 
+                "commune with nature", 
+                "wall of thorns"
+            ], 
+            "2nd": [
+                "barkskin", 
+                "cat's grace", 
+                "cure moderate woundsD", 
+                "flaming sphere (DC 18)", 
+                "lesser restoration", 
+                "soften earth and stone", 
+                "tree shape"
+            ], 
+            "0": [
+                "create water", 
+                "detect magic", 
+                "purify food and drink", 
+                "stabilize"
+            ], 
+            "4th": [
+                "command plants (DC 20)", 
+                "cure critical woundsD", 
+                "flame strike (DC 20)", 
+                "freedom of movement", 
+                "spike stones (DC 20)"
+            ], 
+            "1st": [
+                "ant haul", 
+                "cure light woundsD", 
+                "endure elements", 
+                "faerie fire", 
+                "goodberry", 
+                "longstrider", 
+                "obscuring mist"
+            ]
+        }, 
+        "caster_level": 11
+    }, 
+    {
+        "name": "Ghoran", 
+        "type": "Bard", 
+        "concentration": 4, 
+        "spells": {
+            "1st (2/day)": [
+                "charm person (DC 14)", 
+                "sleep (DC 14)"
+            ], 
+            "0 (at will)": [
+                "daze (DC 13)", 
+                "light", 
+                "mending", 
+                "message"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Mummy Lord", 
+        "type": "Cleric", 
+        "domains": [
+            "Spell"
+        ], 
+        "concentration": 14, 
+        "spells": {
+            "3rd": [
+                "animate dead", 
+                "bestow curse (DC 19)", 
+                "deeper darknessD", 
+                "magic vestment", 
+                "sands of time"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "guidance", 
+                "read magic", 
+                "resistance"
+            ], 
+            "5th": [
+                "dispel goodD (DC 20)", 
+                "greater contagion (DC 21)", 
+                "slay living (DC 21)"
+            ], 
+            "2nd": [
+                "align weaponD (evil only)", 
+                "bull's strength", 
+                "desecrate", 
+                "dread bolt (DC 17)", 
+                "hold person (DC 18)", 
+                "silence (DC 17)"
+            ], 
+            "4th": [
+                "divine power", 
+                "poison (DC 20)", 
+                "shadow conjurationD (DC 19)", 
+                "Spit Venom (DC 19)"
+            ], 
+            "1st": [
+                "bane (DC 17)", 
+                "cause fear (DC 17)", 
+                "command (DC 17)", 
+                "detect good", 
+                "divine favor", 
+                "protection from goodD", 
+                "sanctuary (DC 16)"
+            ]
+        }, 
+        "caster_level": 9
+    }, 
+    {
+        "name": "Muse", 
+        "type": "Bard", 
+        "concentration": 25, 
+        "spells": {
+            "6th (2)": [
+                "brilliant inspiration", 
+                "irresistible dance (DC 25)"
+            ], 
+            "3rd (7)": [
+                "exquisite accompaniment", 
+                "glibness", 
+                "good hope", 
+                "haste", 
+                "purging finale"
+            ], 
+            "0 (at will)": [
+                "detect magic", 
+                "ghost sound (DC 19)", 
+                "lullaby (DC 19)", 
+                "message", 
+                "prestidigitation", 
+                "summon instrument"
+            ], 
+            "1st (8)": [
+                "hideous laughter (DC 20)", 
+                "identify", 
+                "liberating command", 
+                "saving finale", 
+                "solid note", 
+                "timely inspiration"
+            ], 
+            "4th (6)": [
+                "break enchantment", 
+                "heroic finale", 
+                "legend lore", 
+                "modify memory (DC 23)", 
+                "virtuoso performance"
+            ], 
+            "5th (5)": [
+                "greater dispel magic", 
+                "greater heroism", 
+                "frozen note (DC 25)", 
+                "shadowbard"
+            ], 
+            "2nd (7)": [
+                "calm emotions (DC 21)", 
+                "eagle's splendor", 
+                "gallant inspiration", 
+                "honeyed tongue", 
+                "share memory (DC 21)", 
+                "tactical acumen"
+            ]
+        }, 
+        "caster_level": 16
+    }, 
+    {
+        "name": "Reptoid", 
+        "type": "Mesmerist", 
+        "concentration": 4, 
+        "spells": {
+            "1st (2/day)": [
+                "hypnotism (DC 14)", 
+                "innocence"
+            ], 
+            "0 (at will)": [
+                "daze (DC 13)", 
+                "detect magic", 
+                "message", 
+                "prestidigitation"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "mystery": "heavens", 
+        "name": "Shabti", 
+        "type": "Oracle", 
+        "concentration": 4, 
+        "spells": {
+            "0 (at will)": [
+                "bleed (DC 13)", 
+                "create water", 
+                "detect magic", 
+                "ghost sound (DC 13)", 
+                "mage hand", 
+                "stabilize"
+            ], 
+            "1st (4/day)": [
+                "command (DC 14)", 
+                "cure light wounds", 
+                "summon monster I"
+            ]
+        }, 
+        "caster_level": 1
+    }, 
+    {
+        "name": "Shen", 
+        "type": "Sorcerer", 
+        "concentration": 23, 
+        "spells": {
+            "5th (7/day)": [
+                "dominate person (DC 21)", 
+                "persistent image (DC 25)", 
+                "shadow evocation (DC 25)", 
+                "telekinesis(DC 21)"
+            ], 
+            "6th (7/day)": [
+                "globe of invulnerability", 
+                "greater dispel magic", 
+                "mass suggestion (DC 22)", 
+                "programmed image (DC 26)"
+            ], 
+            "7th (6/day)": [
+                "control weather", 
+                "greater shadow conjuration (DC 27)", 
+                "prismatic spray (DC 23)"
+            ], 
+            "3rd (7/day)": [
+                "deep slumber (DC 19)", 
+                "dispel magic", 
+                "haste", 
+                "major image (DC 23)"
+            ], 
+            "2nd (8/day)": [
+                "euphoric cloud (DC 18)", 
+                "hypnotic pattern (DC 22)", 
+                "minor image (DC 22)", 
+                "mirror image", 
+                "invisibility"
+            ], 
+            "4th (7/day)": [
+                "dimension door", 
+                "greater invisibility", 
+                "rainbow pattern (DC 24)", 
+                "shadow conjuration (DC 24)"
+            ], 
+            "1st (8/day)": [
+                "comprehend languages", 
+                "obscuring mist", 
+                "silent image (DC 21)", 
+                "unseen servant", 
+                "vanish"
+            ], 
+            "8th (4/day)": [
+                "maze", 
+                "greater shadow evocation (DC 28)"
+            ]
+        }, 
+        "caster_level": 17
+    }, 
+    {
+        "name": "Vishap", 
+        "type": "Psychic", 
+        "concentration": 22, 
+        "spells": {
+            "4th (5/day)": [
+                "condensed ether", 
+                "mind probe(DC 21)", 
+                "mindwipe(DC 21)", 
+                "synaptic scramble(DC 21)", 
+                "thought shield III", 
+                "thoughtsense"
+            ], 
+            "6th (2/day)": [
+                "ego whip IV(DC 23)", 
+                "psychic surgery "
+            ], 
+            "7th (1/day)": [
+                "ethereal envelopment (DC 24)", 
+                "psychic crush III(DC 24)"
+            ], 
+            "5th (3/day)": [
+                "etheric shards (DC 22)", 
+                "explode head(DC 22)", 
+                "id insinuation IV(DC 22)", 
+                "wall of ectoplasm"
+            ], 
+            "1st (7/day)": [
+                "burst of adrenaline", 
+                "charge object", 
+                "decrepit disguise(DC 18)", 
+                "deja vu", 
+                "mindlink", 
+                "psychic reading", 
+                "telempathic projection"
+            ], 
+            "3rd (6/day)": [
+                "analyze aura", 
+                "ectoplasmic snare", 
+                "node of blasting(DC 20)", 
+                "purge spirit ", 
+                "mindscape door", 
+                "synaptic pulse(DC 20)"
+            ], 
+            "2nd (7/day)": [
+                "anticipate thoughts", 
+                "aversion(DC 19)", 
+                "demand offering(DC 19)", 
+                "detect mindscape", 
+                "hypercognition", 
+                "instigate psychic duel(DC 19)", 
+                "mental block(DC 19)"
+            ]
+        }, 
+        "caster_level": 15
+    }
+]
