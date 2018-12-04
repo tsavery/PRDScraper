@@ -36,7 +36,7 @@ bestiary_base_urls = ['http://legacy.aonprd.com/bestiary/', 'http://legacy.aonpr
                  'http://legacy.aonprd.com/bestiary3/', 'http://legacy.aonprd.com/bestiary4/', 'http://legacy.aonprd.com/bestiary5/']
 
 
-for i in range(4,5):
+for i in range(0,5):
     print('Scraping Beastiary ' + str(i+1))
     print('====================')
     page = urllib2.urlopen(bestiary_urls[i])
@@ -537,13 +537,13 @@ for i in range(4,5):
                             result = re.split(', (?![^(]*\))', choicematch.group())
                             spell_profile.domains = result
 
-                        choiceregex = re.compile('(?<=Bloodline )[A-Za-z]+')
+                        choiceregex = re.compile('(?<=Bloodline )[a-z\(\) ]+')
                         choicematch = choiceregex.search(buffer)
                         if choicematch:
                             result = choicematch.group()
                             spell_profile.bloodline = result
 
-                        choiceregex = re.compile('(?<=Mystery )[A-Za-z]+')
+                        choiceregex = re.compile('(?<=Mystery )[a-z\(\) ]+')
                         choicematch = choiceregex.search(buffer)
                         if choicematch:
                             result = choicematch.group()
@@ -582,7 +582,7 @@ for i in range(4,5):
 
     # Dump Data to Json File
     jsonstr = json.dumps(monsters, default=obj_dict, indent=4)
-    filename = ".\\output\\bestiary" + str(i+1) + ".json"
+    filename = "..\\output\\monsters\\bestiary" + str(i+1) + ".json"
     if not os.path.exists(os.path.dirname(filename)):
         try:
             os.makedirs(os.path.dirname(filename))
@@ -593,7 +593,7 @@ for i in range(4,5):
     f.write(jsonstr)
     f.close()
     jsonstr = json.dumps(spell_profiles, default=obj_dict, indent=4)
-    filename = ".\\output\\bestiary" + str(i+1) + "_spells.json"
+    filename = "..\\output\\monsters\\bestiary" + str(i+1) + "_spells.json"
     if not os.path.exists(os.path.dirname(filename)):
         try:
             os.makedirs(os.path.dirname(filename))
