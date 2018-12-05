@@ -9,6 +9,7 @@ import os
 import errno
 from monster import Monster
 from spellprofile import SpellProfile
+from spelllikeprofile import SpellLikeProfile
 from bs4 import BeautifulSoup
 
 def removeTrailingAndLeadingSpaces(value):
@@ -57,6 +58,7 @@ for i in range(0,5):
     links.pop(0)
     monsters = []
     spell_profiles = []
+    spell_like_profiles = []
     for y in links:
         if "phantomArmor.html" in y:
             continue
@@ -555,16 +557,24 @@ for i in range(0,5):
                 regex = re.compile('(?<=Spell-Like Abilities \(CL )\d+')
                 match = regex.search(buffer)
                 if match:
+                    monster.spell_like_abilities = True
+                    spell_like_profile = SpellLikeProfile(name)
                     # Spell-Like Ability Caster Level
                     result = match.group()
-                    monster.spell_like_caster_level = int(result)
+                    spell_like_profile.spell_like_caster_level = int(result)
+
+                    spellregex = re.compile('[A-Z][a-z]+(?= Spell-Like)')
+                    spellmatch = spellregex.search(buffer)
+                    if(spellmatch):
+                        result = spellmatch.group()
+                        SpellLikeProfile.type = result
 
                     # Concentration Bonus
                     spellregex = re.compile('((?<=Spell-Like Abilities \(CL \d\w\w; concentration \+)|(?<=Spell-Like Abilities \(CL \d\d\w\w; concentration \+))\d+')
                     spellmatch = spellregex.search(buffer)
                     if spellmatch:
                         result = spellmatch.group()
-                        monster.spell_like_concentration = int(result)
+                        spell_like_profile.spell_like_concentration = int(result)
 
                     # Spell-Like Abiltiies
                     regex = re.compile('((?:(?:Constant|\d+\/day|At will|\d+\/week|\d+\/year)—[\d\w \/;,\(\)%\.\']+\n))+')
@@ -574,7 +584,9 @@ for i in range(0,5):
                         for line in lines:
                             if line != '':
                                 val = line.split('—'.decode('utf-8'))
-                                monster.spell_like_abilities[val[0]] = re.split(', (?![^(]*\))', val[1])
+                                spell_like_profile.spell_like_abilities[val[0]] = re.split(', (?![^(]*\))', val[1])
+
+                    spell_like_profiles.append(spell_like_profile)
 
                 # Add Source
                 monster.source = "Pathfinder RPG Bestiary " + str(i+1)
@@ -594,6 +606,17 @@ for i in range(0,5):
     f.close()
     jsonstr = json.dumps(spell_profiles, default=obj_dict, indent=4)
     filename = "..\\output\\monsters\\bestiary" + str(i+1) + "_spells.json"
+    if not os.path.exists(os.path.dirname(filename)):
+        try:
+            os.makedirs(os.path.dirname(filename))
+        except OSError as exc: # Guard against race condition
+            if exc.errno != errno.EEXIST:
+                raise
+    f = open(filename, "w")
+    f.write(jsonstr)
+    f.close()
+    jsonstr = json.dumps(spell_like_profiles, default=obj_dict, indent=4)
+    filename = "..\\output\\monsters\\bestiary" + str(i+1) + "_spelllikeabilities.json"
     if not os.path.exists(os.path.dirname(filename)):
         try:
             os.makedirs(os.path.dirname(filename))

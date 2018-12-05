@@ -35,10 +35,8 @@ class Monster(object):
         self.psychic_magic_concentration = 0
         self.psychic_magic_abilities = []
         self.psychic_energy_pool = 0
-        self.spell_like_caster_level = 0
-        self.spell_like_concentration = 0
-        self.spell_like_abilities = {}
         self.spellcaster = False
+        self.spell_like_abilities = False
         self.strength = 0
         self.dexterity = 0
         self.constitution = 0
