@@ -533,7 +533,7 @@ for i in range(0,5):
                             result = re.split(', (?![^(]*\))', choicematch.group())
                             spell_profile.opposition_schools = result
 
-                        choiceregex = re.compile('((?<=Domains )|(?<=Domain ))[A-Za-z, ]+')
+                        choiceregex = re.compile('((?<=Domains )|(?<=Domain ))[A-Z][A-Za-z, ]+(?=\n)')
                         choicematch = choiceregex.search(buffer)
                         if choicematch:
                             result = re.split(', (?![^(]*\))', choicematch.group())
@@ -550,6 +550,14 @@ for i in range(0,5):
                         if choicematch:
                             result = choicematch.group()
                             spell_profile.mystery = result
+
+                        spell_profiles.append(spell_profile)
+
+                        choiceregex = re.compile('(?<=Patron )[a-z\(\) ]+')
+                        choicematch = choiceregex.search(buffer)
+                        if choicematch:
+                            result = choicematch.group()
+                            spell_profile.patron = result
 
                         spell_profiles.append(spell_profile)
 

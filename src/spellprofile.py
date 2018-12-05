@@ -8,3 +8,4 @@ class SpellProfile(object):
         self.domains = []
         self.opposition_schools = []
         self.bloodline = ""
+        self.patron = ""
