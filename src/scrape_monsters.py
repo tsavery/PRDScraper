@@ -551,8 +551,6 @@ for i in range(0,5):
                             result = choicematch.group()
                             spell_profile.mystery = result
 
-                        spell_profiles.append(spell_profile)
-
                         choiceregex = re.compile('(?<=Patron )[a-z\(\) ]+')
                         choicematch = choiceregex.search(buffer)
                         if choicematch:
@@ -571,11 +569,11 @@ for i in range(0,5):
                     result = match.group()
                     spell_like_profile.spell_like_caster_level = int(result)
 
-                    spellregex = re.compile('[A-Z][a-z]+(?= Spell-Like)')
+                    spellregex = re.compile('[A-Z][a-z]+(?= Spell-Like Abilities)')
                     spellmatch = spellregex.search(buffer)
                     if(spellmatch):
                         result = spellmatch.group()
-                        SpellLikeProfile.type = result
+                        spell_like_profile.type = result
 
                     # Concentration Bonus
                     spellregex = re.compile('((?<=Spell-Like Abilities \(CL \d\w\w; concentration \+)|(?<=Spell-Like Abilities \(CL \d\d\w\w; concentration \+))\d+')
