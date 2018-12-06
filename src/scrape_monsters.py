@@ -604,6 +604,34 @@ for i in range(0,5):
 
                     spell_like_profiles.append(spell_like_profile)
 
+                # Before Combat Tactics
+                regex = re.compile('(?<=Before Combat ).+')
+                match = regex.search(buffer)
+                if match:
+                    result = match.group()
+                    monster.tactics_before_combat = result
+
+                # During Combat Tactics
+                regex = re.compile('(?<=During Combat ).+')
+                match = regex.search(buffer)
+                if match:
+                    result = match.group()
+                    monster.tactics_during_combat = result
+
+                # Base Statistics Tactics
+                regex = re.compile('(?<=Base Statistics ).+')
+                match = regex.search(buffer)
+                if match:
+                    result = match.group()
+                    monster.tactics_base_statistics = result
+
+                # Combat Gear
+                regex = re.compile('(?<=Combat Gear ).+')
+                match = regex.search(buffer)
+                if match:
+                    result = re.split(', (?![^(]*\))', match.group())
+                    monster.combat_gear = result
+
                 # Add Source
                 monster.source = "Pathfinder RPG Bestiary " + str(i+1)
                 monsters.append(monster)
