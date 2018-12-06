@@ -505,7 +505,7 @@ for i in range(0,5):
                     monster.spellcaster = True
                     spell_profile = SpellProfile(name)
                     # Caster Level
-                    spellregex = re.compile('((?<=Spells Known \(CL )|(?<=Spells Prepared \(CL ))\d+')
+                    spellregex = re.compile('((?<=Spells Known \(CL )|(?<=Spells Prepared \(CL )|(?<=Extracts Prepared \(CL ))\d+')
                     spellmatch = spellregex.search(s)
                     if spellmatch:
                         result = spellmatch.group()
