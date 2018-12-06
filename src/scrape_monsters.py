@@ -85,9 +85,13 @@ for i in range(0,5):
 
                 # get all the content for the stat block as plain text
                 buffer = ""
+                lines = 0
                 while currentElement.get('class'):
+                    if 'stat-block-title' in currentElement.get('class') and lines > 0:
+                        break;
                     currentElement = currentElement.find_next('p')
                     buffer += currentElement.get_text() + "\n"
+                    lines += 1
                 # parse the statblock into the object using regexes
                 monster = Monster(name, cr)
 
@@ -495,31 +499,32 @@ for i in range(0,5):
                         monster.psychic_magic_abilities = re.split(', (?![^(]*\))', val[1])
 
                 # Check for Spellcasting
-                regex = re.compile('((?<=Spells Known \(CL )|(?<=Spells Prepared \(CL ))\d+')
-                match = regex.search(buffer)
-
-                if match:
+                regex = re.compile('.+\n(?:(?:\d[strdthn]{2} \(\d{1,2}\/day\)|0 \(at will\)|\d[strdthn]{2}|0|\d[strdthn]{2} \(\d+\))(?:—[\d\w -+;,\(\)%\.\'\/]+\n))+(?:(?:D |Bloodline [a-z]|Opposition Schools [a-z]|Patron [a-z]|Mystery [a-z]| Domain [a-z]| Domains [a-z])[\d\w\(\) ;,]+\n){0,1}')
+                matches = regex.findall(buffer)
+                for s in matches:
                     monster.spellcaster = True
                     spell_profile = SpellProfile(name)
-                    result = match.group()
                     # Caster Level
-                    spell_profile.caster_level = int(result)
-
+                    spellregex = re.compile('((?<=Spells Known \(CL )|(?<=Spells Prepared \(CL ))\d+')
+                    spellmatch = spellregex.search(s)
+                    if spellmatch:
+                        result = spellmatch.group()
+                        spell_profile.caster_level = int(result)
                     # Concentration Bonus
                     spellregex = re.compile('((?<=Prepared \(CL \d\w\w; concentration \+)|(?<=Prepared \(CL \d\d\w\w; concentration \+)|(?<=Known \(CL \d\w\w; concentration \+)|(?<=Known \(CL \d\d\w\w; concentration \+))\d+')
-                    spellmatch = spellregex.search(buffer)
+                    spellmatch = spellregex.search(s)
                     if spellmatch:
                         result = spellmatch.group()
                         spell_profile.concentration = int(result)
 
                     # Spells
                     spellregex = re.compile('[A-Z][a-z]+(?= Spells Known| Spells Prepared| Extracts Prepared)')
-                    spellmatch = spellregex.search(buffer)
+                    spellmatch = spellregex.search(s)
                     if(spellmatch):
                         result = spellmatch.group()
                         spell_profile.type = result
-                    spellregex = re.compile('((?:\d[strdthn]{2} \(\d{1,2}\/day\)|0 \(at will\)|\d[strdthn]{2}|0|\d[strdthn]{2} \(\d+\))(?:—[\d\w ;,\(\)%\.\'\/]+\n))+', re.MULTILINE)
-                    spellmatch = spellregex.search(buffer)
+                    spellregex = re.compile('((?:\d[strdthn]{2} \(\d{1,2}\/day\)|0 \(at will\)|\d[strdthn]{2}|0|\d[strdthn]{2} \(\d+\))(?:—[\d\w -+;,\(\)%\.\'\/-]+\n))+', re.MULTILINE)
+                    spellmatch = spellregex.search(s)
                     if spellmatch:
                         lines = spellmatch.group().decode('utf-8').split('\n')
                         for line in lines:
@@ -528,31 +533,31 @@ for i in range(0,5):
                                 spell_profile.spells[val[0]] = re.split(', (?![^(]*\))', val[1])
                         # Domains, Bloodline, Opposition Schools, Mystery
                         choiceregex = re.compile('(?<=Opposition Schools )[A-Za-z, ]+')
-                        choicematch = choiceregex.search(buffer)
+                        choicematch = choiceregex.search(s)
                         if choicematch:
                             result = re.split(', (?![^(]*\))', choicematch.group())
                             spell_profile.opposition_schools = result
 
                         choiceregex = re.compile('((?<=Domains )|(?<=Domain ))[A-Z][A-Za-z, ]+(?=\n)')
-                        choicematch = choiceregex.search(buffer)
+                        choicematch = choiceregex.search(s)
                         if choicematch:
                             result = re.split(', (?![^(]*\))', choicematch.group())
                             spell_profile.domains = result
 
                         choiceregex = re.compile('(?<=Bloodline )[a-z\(\) ]+')
-                        choicematch = choiceregex.search(buffer)
+                        choicematch = choiceregex.search(s)
                         if choicematch:
                             result = choicematch.group()
                             spell_profile.bloodline = result
 
                         choiceregex = re.compile('(?<=Mystery )[a-z\(\) ]+')
-                        choicematch = choiceregex.search(buffer)
+                        choicematch = choiceregex.search(s)
                         if choicematch:
                             result = choicematch.group()
                             spell_profile.mystery = result
 
                         choiceregex = re.compile('(?<=Patron )[a-z\(\) ]+')
-                        choicematch = choiceregex.search(buffer)
+                        choicematch = choiceregex.search(s)
                         if choicematch:
                             result = choicematch.group()
                             spell_profile.patron = result
@@ -560,31 +565,36 @@ for i in range(0,5):
                         spell_profiles.append(spell_profile)
 
                 # Check for Spell-Like Abilities
-                regex = re.compile('(?<=Spell-Like Abilities \(CL )\d+')
-                match = regex.search(buffer)
-                if match:
+                regex = re.compile('.+\n(?:(?:(?:Constant|\d+\/day|At will|\d+\/week|\d+\/year)—[\d\w \/;,\(\)%\.\'-\+]+\n))+')
+                matches = regex.findall(buffer)
+
+                for s in matches:
                     monster.spell_like_abilities = True
                     spell_like_profile = SpellLikeProfile(name)
+                    spellregex = re.compile('(?<=Spell-Like Abilities \(CL )\d+')
+                    spellmatch = spellregex.search(s)
                     # Spell-Like Ability Caster Level
-                    result = match.group()
-                    spell_like_profile.spell_like_caster_level = int(result)
+                    if spellmatch:
+                        result = spellmatch.group()
+                        spell_like_profile.spell_like_caster_level = int(result)
+
 
                     spellregex = re.compile('[A-Z][a-z]+(?= Spell-Like Abilities)')
-                    spellmatch = spellregex.search(buffer)
+                    spellmatch = spellregex.search(s)
                     if(spellmatch):
                         result = spellmatch.group()
                         spell_like_profile.type = result
 
                     # Concentration Bonus
                     spellregex = re.compile('((?<=Spell-Like Abilities \(CL \d\w\w; concentration \+)|(?<=Spell-Like Abilities \(CL \d\d\w\w; concentration \+))\d+')
-                    spellmatch = spellregex.search(buffer)
+                    spellmatch = spellregex.search(s)
                     if spellmatch:
                         result = spellmatch.group()
                         spell_like_profile.spell_like_concentration = int(result)
 
                     # Spell-Like Abiltiies
-                    regex = re.compile('((?:(?:Constant|\d+\/day|At will|\d+\/week|\d+\/year)—[\d\w \/;,\(\)%\.\']+\n))+')
-                    spellmatch = regex.search(buffer)
+                    regex = re.compile('((?:(?:Constant|\d+\/day|At will|\d+\/week|\d+\/year)—[\d\w \/;,\(\)%\.\'-\+]+\n))+')
+                    spellmatch = regex.search(s)
                     if spellmatch:
                         lines = spellmatch.group().decode('utf-8').split('\n')
                         for line in lines:
