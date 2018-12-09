@@ -7,6 +7,9 @@ from monster import Monster
 from spellprofile import SpellProfile
 from spelllikeprofile import SpellLikeProfile
 
+def split_csv(str):
+    return re.split(', (?![^(]*\))', str)
+
 def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, source):
     # parse the statblock into the object using regexes
     monster = Monster(name, cr)
@@ -25,7 +28,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     regex = re.compile('(?<=Senses ).+(?=;)')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.senses = result
 
     # Perception Bonus
@@ -42,7 +45,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     regex = re.compile('(?<=Aura ).+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.aura = result
 
     # AC and Bonuses
@@ -66,36 +69,8 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     regex = re.compile('((?<=flat-footed \d\d \()|(?<=flat-footed \d \()).+(?=\))')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.ac_bonuses = result
-
-    # Shield Bonus
-    regex = re.compile('(?<=\+)\d+(?= shield)')
-    match = regex.search(buffer)
-    if match:
-        result = match.group()
-        monster.shield_ac_bonus = int(result)
-
-    # Natural Armor Bonus
-    regex = re.compile('(?<=\+)\d+(?= natural)')
-    match = regex.search(buffer)
-    if match:
-        result = match.group()
-        monster.natural_ac_bonus = int(result)
-
-    # Dodge Armor Bonus
-    regex = re.compile('(?<=\+)\d+(?= dodge)')
-    match = regex.search(buffer)
-    if match:
-        result = match.group()
-        monster.dodge_ac_bonus = int(result)
-
-    # Deflection Armor Bonus
-    regex = re.compile('(?<=\+)\d+(?= deflection)')
-    match = regex.search(buffer)
-    if match:
-        result = match.group()
-        monster.deflection_ac_bonus = int(result)
 
     # HP
     regex = re.compile('(?<=hp )[0-9\(\)d\+– ]+(?=[;\n])')
@@ -108,7 +83,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     regex = re.compile('(?<=\d\); ).+(?=\nFort)')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.health_rules = result
 
     # Fortitude Save
@@ -145,7 +120,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     regex = re.compile('((?<=Will \+\d; )|(?<=Will \+\d\d; )).+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.saving_throw_modifiers = result
 
     # Spell Resistence
@@ -166,28 +141,28 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     regex = re.compile('(?<=Defensive Abilities )[\d \w\+\(\)–,]+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.defensive_abilities = result
 
     # Immunities
     regex = re.compile('(?<=Immune )[\d \w\+\(\)–,]+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.immunities = result
 
     # Weaknesses
     regex = re.compile('(?<=Weaknesses )[\d \w\+\(\)–,]+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.immunities = result
 
     # Resistences
     regex = re.compile('(?<=Resist )[\d \w\+\(\)–,]+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.resistences = result
 
     # Speed Profile
@@ -236,7 +211,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     regex = re.compile('(?<=Offensive Abilities )[\d \w\+\(\)–,]+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.offensive_abilities = result
 
     # Strength
@@ -309,28 +284,28 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     regex = re.compile('(?<=Feats ).+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.feats = result
 
     # Skills
     regex = re.compile('(?<=Skills )[A-Za-z \(\)\+–—,\d]+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.skills = result
 
     # Racial Skill Modifiers
     regex = re.compile('(?<=Racial Modifiers )[A-Za-z \(\)\+–,\d]+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.racial_skill_modifiers = result
 
     # Languages
     regex = re.compile('(?<=Languages )[A-Za-z\d,\.\' ]+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.languages = result
 
     # Language Special Rules
@@ -339,7 +314,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     if match:
         val = match.group().split("; ")
         if len(val) > 1:
-            result = re.split(', (?![^(]*\))', val[1])
+            result = split_csv(match.group())
             monster.language_special_rules = result
 
     # Special Qualities
@@ -413,7 +388,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
             result = spellmatch.group()
             val = result.split(' PE—')
             monster.psychic_energy_pool = int(val[0])
-            monster.psychic_magic_abilities = re.split(', (?![^(]*\))', val[1])
+            monster.psychic_magic_abilities = split_csv(val[1])
 
     # Check for Spellcasting
     regex = re.compile('.+\n(?:(?:\d[strdthn]{2} \(\d{1,2}\/day\)|0 \(at will\)|\d[strdthn]{2}|0|\d[strdthn]{2} \(\d+\))(?:—[\d\w -+;,\(\)%\.\'\/]+\n))+(?:(?:D |Bloodline [a-z]|Opposition Schools [a-z]|Patron [a-z]|Mystery [a-z]| Domain [a-z]| Domains [a-z])[\d\w\(\) ;,]+\n){0,1}')
@@ -447,18 +422,18 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
             for line in lines:
                 if line != '':
                     val = line.split('—'.decode('utf-8'))
-                    spell_profile.spells[val[0]] = re.split(', (?![^(]*\))', val[1])
+                    spell_profile.spells[val[0]] = split_csv(val[1])
             # Domains, Bloodline, Opposition Schools, Mystery
             choiceregex = re.compile('(?<=Opposition Schools )[A-Za-z, ]+')
             choicematch = choiceregex.search(s)
             if choicematch:
-                result = re.split(', (?![^(]*\))', choicematch.group())
+                result = split_csv(choicematch.group())
                 spell_profile.opposition_schools = result
 
             choiceregex = re.compile('((?<=Domains )|(?<=Domain ))[A-Z][A-Za-z, ]+(?=\n)')
             choicematch = choiceregex.search(s)
             if choicematch:
-                result = re.split(', (?![^(]*\))', choicematch.group())
+                result = split_csv(choicematch.group())
                 spell_profile.domains = result
 
             choiceregex = re.compile('(?<=Bloodline )[a-z\(\) ]+')
@@ -517,7 +492,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
             for line in lines:
                 if line != '':
                     val = line.split('—'.decode('utf-8'))
-                    spell_like_profile.spell_like_abilities[val[0]] = re.split(', (?![^(]*\))', val[1])
+                    spell_like_profile.spell_like_abilities[val[0]] = split_csv(val[1])
 
         spell_like_profiles.append(spell_like_profile)
 
@@ -546,7 +521,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     regex = re.compile('(?<=Combat Gear ).+')
     match = regex.search(buffer)
     if match:
-        result = re.split(', (?![^(]*\))', match.group())
+        result = split_csv(match.group())
         monster.combat_gear = result
 
     # Add Source
