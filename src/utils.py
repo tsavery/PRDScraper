@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 import errno
 
@@ -6,6 +8,13 @@ def remove_trailing_and_leading_spaces(value):
         value = value[:-1]
     while value.startswith(' '):
         value = value[1:]
+    return value
+
+def replace_unicode_characters(value):
+    value = value.replace('\u2013', '-')
+    value = value.replace('\u00d7','x')
+    value = value.replace('\t', '')
+
     return value
 
 def obj_dict(obj):
@@ -27,5 +36,6 @@ def save_json(jsonstr, filename):
             if exc.errno != errno.EEXIST:
                 raise
     f = open(filename, "w")
+    jsonstr = replace_unicode_characters(jsonstr)
     f.write(jsonstr)
     f.close()
