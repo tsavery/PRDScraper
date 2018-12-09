@@ -391,7 +391,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
             monster.psychic_magic_abilities = split_csv(val[1])
 
     # Check for Spellcasting
-    regex = re.compile('.+\n(?:(?:\d[strdthn]{2} \(\d{1,2}\/day\)|0 \(at will\)|\d[strdthn]{2}|0|\d[strdthn]{2} \(\d+\))(?:—[\d\w -+;,\(\)%\.\'\/]+\n))+(?:(?:D |Bloodline [a-z]|Opposition Schools [a-z]|Patron [a-z]|Mystery [a-z]| Domain [a-z]| Domains [a-z])[\d\w\(\) ;,]+\n){0,1}')
+    regex = re.compile('.+\n(?:(?:\d[strdthn]{2} \(\d{1,2}\/day\)|0 \(at will\)|\d[strdthn]{2}|0|\d[strdthn]{2} \(\d+\))(?:—[\d\w -+;,\(\)%\.\'\/]+\n))+(?:(?:D |Bloodline [a-z]|Opposition Schools [a-z]|Patron [a-z]|Mystery [a-z]| Domain [a-z]| Domains [a-z])[\*\d\w\(\) ;,]+\n){0,1}')
     matches = regex.findall(buffer)
     for s in matches:
         monster.spellcaster = True

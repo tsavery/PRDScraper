@@ -18,7 +18,7 @@ def replace_unicode_characters(value):
     return value
 
 def obj_dict(obj):
-    return del_empty(obj.__dict__.copy())
+    return del_empty(obj._attrs.copy())
 
 def del_empty(d):
     for key, value in list(d.items()):

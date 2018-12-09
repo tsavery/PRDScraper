@@ -1,5 +1,8 @@
+from collections import OrderedDict
+
 class Monster(object):
     def __init__(self, name, cr):
+        self._attrs = OrderedDict()
         self.name = name
         self.cr = cr
         self.type = ""
@@ -60,3 +63,14 @@ class Monster(object):
         self.tactics_during_combat = ""
         self.tactics_before_combat = ""
         self.tactics_base_statistics = ""
+
+    def __getattr__(self, name):
+        try:
+            return self._attrs[name]
+        except KeyError:
+            raise AttributeError(name)
+
+    def __setattr__(self, name, value):
+        if name == '_attrs':
+            return super(Monster, self).__setattr__(name, value)
+        self._attrs[name] = value

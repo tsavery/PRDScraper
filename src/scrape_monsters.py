@@ -52,7 +52,7 @@ for i in range(0,5):
         monstersoup = BeautifulSoup(monsterpage, 'html.parser')
 
         for x in monstersoup.find_all('p', class_='stat-block-title'):
-            if "CR" not in x.get_text():
+            if "CR" not in x.get_text() or "Trap" in x.get_text():
                 continue
             name = ""
             cr = 0
@@ -83,7 +83,7 @@ for i in range(0,5):
                 scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Bestiary " + str(i+1))
 
     # Dump Data to Json File
-    jsonstr = json.dumps(monsters, default=utils.obj_dict, indent=4)
+    jsonstr = json.dumps(monsters, default=utils.obj_dict, sort_keys=False, indent=4)
     filename = "..\\output\\monsters\\bestiary" + str(i+1) + ".json"
     utils.save_json(jsonstr, filename)
 
@@ -106,7 +106,7 @@ for y in monster_codex_urls:
     monstersoup = BeautifulSoup(monsterpage, 'html.parser')
 
     for x in monstersoup.find_all('p', class_='stat-block-title'):
-        if "CR" not in x.get_text():
+        if "CR" not in x.get_text() or "Trap" in x.get_text():
             continue
         name = ""
         cr = 0
