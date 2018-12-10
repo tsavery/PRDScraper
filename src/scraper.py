@@ -353,12 +353,16 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
         monster.type = result
 
     # Classline
-    regex = re.compile('(?<=\n)[A-Z][a-z]+ ([a-z/\(\)\d]+ )+\d{1,2}(?=\n)')
-    match = regex.search(buffer)
-    if match:
-        result = match.group()
-        if 'speed' not in result and 'Resist' not in result:
-            monster.classline = result
+    regex = re.compile('(?<=\n)[A-Z][a-z\-]+(?:[a-z/\(\)\d\- ]* )+\d{1,2}(?=\n)')
+    matches = regex.findall(buffer)
+    if len(matches) is 1:
+        result = matches[0]
+        monster.classline = result
+    elif len(matches) > 1:
+        result = matches[0]
+        for s in range(1, len(matches)):
+            result += '/' + matches[s].lower()
+        monster.classline = result
 
     #Encode the buffer for spellcasting checks
     buffer = buffer.encode('utf-8')
