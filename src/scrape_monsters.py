@@ -3,7 +3,6 @@
 # import libraries
 import urllib2
 import re
-import json
 import utils
 import scraper
 from monster import Monster
@@ -11,6 +10,44 @@ from spellprofile import SpellProfile
 from spelllikeprofile import SpellLikeProfile
 from bs4 import BeautifulSoup
 
+def scrape_page(url, monsters, spell_profiles, spell_like_profiles, source):
+    if "phantomArmor.html" in y:
+        return
+    print('scraping ' + y + '...')
+    print('====================')
+    monsterpage = urllib2.urlopen(url)
+    monstersoup = BeautifulSoup(monsterpage, 'html.parser')
+
+    for x in monstersoup.find_all('p', class_='stat-block-title'):
+        if "CR" not in x.get_text() or "Trap" in x.get_text():
+            continue
+        name = ""
+        cr = 0
+        if x.b and x.b.find('span', class_='stat-block-cr') or x.find('span', class_='stat-block-cr'):
+            if(x.b):
+                pair = x.b.get_text().split('CR')
+            else:
+                pair = x.get_text().split('CR')
+            name = utils.remove_trailing_and_leading_spaces(pair[0])
+
+            cr = utils.remove_trailing_and_leading_spaces(pair[1])
+
+            currentElement = x
+
+            # get all the content for the stat block as plain text
+            buffer = ""
+            lines = 0
+            while currentElement.get('class'):
+                if 'stat-block-title' in currentElement.get('class') and lines > 0:
+                    break
+                currentElement = currentElement.find_next('p')
+                buffer += currentElement.get_text() + "\n"
+                lines += 1
+            if lines < 5:
+                break
+
+            print('\t' + name.encode('utf-8') + ' CR ' + cr.encode('utf-8'))
+            scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, source)
 # urls
 bestiary_urls = ['http://legacy.aonprd.com/bestiary/monsterIndex.html', 'http://legacy.aonprd.com/bestiary2/additionalMonsterIndex.html',
                  'http://legacy.aonprd.com/bestiary3/monsterIndex.html', 'http://legacy.aonprd.com/bestiary4/monsterIndex.html', 'http://legacy.aonprd.com/bestiary5/index.html']
@@ -30,7 +67,6 @@ for i in range(0,0):
     print('====================')
     page = urllib2.urlopen(bestiary_urls[i])
     soup = BeautifulSoup(page, 'html.parser')
-
     body = soup.find('div', class_='body')
 
     # remove tags from hyperlinks
@@ -48,159 +84,48 @@ for i in range(0,0):
     spell_profiles = []
     spell_like_profiles = []
     for y in links:
-        if "phantomArmor.html" in y:
-            continue
-        print('scraping ' + y + '...')
-        print('====================')
-        monsterpage = urllib2.urlopen(bestiary_base_urls[i] + y)
-        monstersoup = BeautifulSoup(monsterpage, 'html.parser')
-
-        for x in monstersoup.find_all('p', class_='stat-block-title'):
-            if "CR" not in x.get_text() or "Trap" in x.get_text():
-                continue
-            name = ""
-            cr = 0
-            if x.b and x.b.find('span', class_='stat-block-cr') or x.find('span', class_='stat-block-cr'):
-                if(x.b):
-                    pair = x.b.get_text().split('CR')
-                else:
-                    pair = x.get_text().split('CR')
-                name = utils.remove_trailing_and_leading_spaces(pair[0])
-
-                cr = utils.remove_trailing_and_leading_spaces(pair[1])
-
-                currentElement = x
-
-                # get all the content for the stat block as plain text
-                buffer = ""
-                lines = 0
-                while currentElement.get('class'):
-                    if 'stat-block-title' in currentElement.get('class') and lines > 0:
-                        break
-                    currentElement = currentElement.find_next('p')
-                    buffer += currentElement.get_text() + "\n"
-                    lines += 1
-                if lines < 5:
-                    continue
-
-                print('\t' + name.encode('utf-8') + ' CR ' + cr.encode('utf-8'))
-                scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Bestiary " + str(i+1))
+        scrape_page(bestiary_base_urls[i] + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Bestiary " + str(i+1))
 
     # Dump Data to Json File
-    jsonstr = json.dumps(monsters, default=utils.obj_dict, sort_keys=False, indent=4)
     filename = "..\\output\\monsters\\bestiary" + str(i+1) + ".json"
-    utils.save_json(jsonstr, filename)
+    utils.save_json(monsters, filename)
 
-    jsonstr = json.dumps(spell_profiles, default=utils.obj_dict, indent=4)
     filename = "..\\output\\monsters\\bestiary" + str(i+1) + "_spells.json"
-    utils.save_json(jsonstr, filename)
+    utils.save_json(spell_profiles, filename)
 
-    jsonstr = json.dumps(spell_like_profiles, default=utils.obj_dict, indent=4)
     filename = "..\\output\\monsters\\bestiary" + str(i+1) + "_spelllikeabilities.json"
-    utils.save_json(jsonstr, filename)
+    utils.save_json(spell_like_profiles, filename)
 
 monsters = []
 spell_profiles = []
 spell_like_profiles = []
 print("Scraping Monster Codex")
 for y in monster_codex_urls:
-    print('scraping ' + y + '...')
-    print('====================')
-    monsterpage = urllib2.urlopen(monster_codex_url_base + y)
-    monstersoup = BeautifulSoup(monsterpage, 'html.parser')
-
-    for x in monstersoup.find_all('p', class_='stat-block-title'):
-        if "CR" not in x.get_text() or "Trap" in x.get_text():
-            continue
-        name = ""
-        cr = 0
-        if x.b and x.b.find('span', class_='stat-block-cr') or x.find('span', class_='stat-block-cr'):
-            if(x.b):
-                pair = x.b.get_text().split('CR')
-            else:
-                pair = x.get_text().split('CR')
-            name = utils.remove_trailing_and_leading_spaces(pair[0])
-
-            cr = utils.remove_trailing_and_leading_spaces(pair[1])
-
-            currentElement = x
-
-            # get all the content for the stat block as plain text
-            buffer = ""
-            lines = 0
-            while currentElement.get('class'):
-                if 'stat-block-title' in currentElement.get('class') and lines > 0:
-                    break
-                currentElement = currentElement.find_next('p')
-                buffer += currentElement.get_text() + "\n"
-                lines += 1
-            if lines < 5:
-                continue
-            print('\t' + name.encode('utf-8') + ' CR ' + cr.encode('utf-8'))
-            scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Monster Codex")
+    scrape_page(monster_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Monster Codex")
 
 # Dump Data to Json File
-jsonstr = json.dumps(monsters, default=utils.obj_dict, indent=4)
 filename = "..\\output\\monsters\\monsterCodex.json"
-utils.save_json(jsonstr, filename)
+utils.save_json(monsters, filename)
 
-jsonstr = json.dumps(spell_profiles, default=utils.obj_dict, indent=4)
 filename = "..\\output\\monsters\\monsterCodex_spells.json"
-utils.save_json(jsonstr, filename)
+utils.save_json(spell_profiles, filename)
 
-jsonstr = json.dumps(spell_like_profiles, default=utils.obj_dict, indent=4)
 filename = "..\\output\\monsters\\monsterCodex_spelllikeabilities.json"
-utils.save_json(jsonstr, filename)
+utils.save_json(spell_like_profiles, filename)
 
 monsters = []
 spell_profiles = []
 spell_like_profiles = []
-print("Scraping Monster Codex")
+print("Scraping NPC Codex")
 for y in npc_codex_urls:
-    print('scraping ' + y + '...')
-    print('====================')
-    monsterpage = urllib2.urlopen(npc_codex_url_base + y)
-    monstersoup = BeautifulSoup(monsterpage, 'html.parser')
-
-    for x in monstersoup.find_all('p', class_='stat-block-title'):
-        if "CR" not in x.get_text() or "Trap" in x.get_text():
-            continue
-        name = ""
-        cr = 0
-        if x.b and x.b.find('span', class_='stat-block-cr') or x.find('span', class_='stat-block-cr'):
-            if(x.b):
-                pair = x.b.get_text().split('CR')
-            else:
-                pair = x.get_text().split('CR')
-            name = utils.remove_trailing_and_leading_spaces(pair[0])
-
-            cr = utils.remove_trailing_and_leading_spaces(pair[1])
-
-            currentElement = x
-
-            # get all the content for the stat block as plain text
-            buffer = ""
-            lines = 0
-            while currentElement.get('class'):
-                if 'stat-block-title' in currentElement.get('class') and lines > 0:
-                    break
-                currentElement = currentElement.find_next('p')
-                buffer += currentElement.get_text() + "\n"
-                lines += 1
-            if lines < 5:
-                continue
-            print('\t' + name.encode('utf-8') + ' CR ' + cr.encode('utf-8'))
-            scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Monster Codex")
+    scrape_page(npc_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG NPC Codex")
 
 # Dump Data to Json File
-jsonstr = json.dumps(monsters, default=utils.obj_dict, indent=4)
 filename = "..\\output\\monsters\\npcCodex.json"
-utils.save_json(jsonstr, filename)
+utils.save_json(monsters, filename)
 
-jsonstr = json.dumps(spell_profiles, default=utils.obj_dict, indent=4)
 filename = "..\\output\\monsters\\npcCodex_spells.json"
-utils.save_json(jsonstr, filename)
+utils.save_json(spell_profiles, filename)
 
-jsonstr = json.dumps(spell_like_profiles, default=utils.obj_dict, indent=4)
 filename = "..\\output\\monsters\\npcCodex_spelllikeabilities.json"
-utils.save_json(jsonstr, filename)
+utils.save_json(spell_like_profiles, filename)

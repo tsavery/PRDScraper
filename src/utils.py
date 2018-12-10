@@ -2,6 +2,7 @@
 
 import os
 import errno
+import json
 
 def remove_trailing_and_leading_spaces(value):
     while value.endswith(' '):
@@ -28,7 +29,8 @@ def del_empty(d):
             del_empty(value)
     return d
 
-def save_json(jsonstr, filename):
+def save_json(val, filename):
+    jsonstr = json.dumps(val, default=obj_dict, sort_keys=False, indent=4)
     if not os.path.exists(os.path.dirname(filename)):
         try:
             os.makedirs(os.path.dirname(filename))
