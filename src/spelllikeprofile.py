@@ -5,9 +5,9 @@ class SpellLikeProfile(object):
         self._attrs = OrderedDict()
         self.name = name
         self.type = ""
-        self.spell_like_caster_level = 0
-        self.spell_like_concentration = 0
-        self.spell_like_abilities = OrderedDict()
+        self.caster_level = 0
+        self.concentration = 0
+        self.abilities = OrderedDict()
 
     def __getattr__(self, name):
         try:

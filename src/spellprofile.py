@@ -12,6 +12,7 @@ class SpellProfile(object):
         self.opposition_schools = []
         self.bloodline = ""
         self.patron = ""
+        self.mystery = ""
 
     def __getattr__(self, name):
         try:

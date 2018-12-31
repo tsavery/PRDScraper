@@ -17,12 +17,12 @@ class Monster(object):
         self.ac_bonuses = []
         self.hp = ""
         self.health_rules = ""
-        self.fortitude = 0
-        self.reflex = 0
-        self.will = 0
+        self.save_fortitude = 0
+        self.save_reflex = 0
+        self.save_will = 0
         self.saving_throw_modifiers = []
         self.spell_resist = 0
-        self.damage_resists = []
+        self.damage_reductions = []
         self.defensive_abilities = []
         self.immunities = []
         self.resistences = []
@@ -31,8 +31,8 @@ class Monster(object):
         self.melee_profile = ""
         self.ranged_profile = ""
         self.special_attacks = ""
-        self.space = 5
-        self.reach = 5
+        self.space = 0
+        self.reach = 0
         self.offensive_abilities = ""
         self.psychic_magic_caster_level = 0
         self.psychic_magic_concentration = 0
