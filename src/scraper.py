@@ -6,6 +6,7 @@ import utils
 from monster import Monster
 from spellprofile import SpellProfile
 from spelllikeprofile import SpellLikeProfile
+from collections import OrderedDict
 
 def get_string(str, buffer):
     regex = re.compile(str)
@@ -55,7 +56,7 @@ def get_language_special_rules(buffer):
     if match:
         val = match.group().split("; ")
         if len(val) > 1:
-            result = split_csv(match.group())
+            result = split_csv(val[1])
             return result
         else:
             return []
@@ -107,7 +108,7 @@ def get_psychic_pool_and_abilities(buffer):
 def get_spells(str, buffer):
     regex = re.compile(str)
     match = regex.search(buffer)
-    spells = {}
+    spells = OrderedDict()
     if match:
         lines = match.group().decode('utf-8').split('\n')
         for line in lines:
@@ -134,7 +135,7 @@ def get_spell_casting_profiles(buffer, name):
             spell_profile.spells = get_spells('((?:\d[strdthn]{2} \(\d{1,2}\/day\)|0 \(at will\)|\d[strdthn]{2}|0|\d[strdthn]{2} \(\d+\))(?:—[\d\w -+;,\(\)%\.\'\/-]+\n))+', s)
 
             # Domains, Bloodline, Opposition Schools, Mystery
-            spell_profile.opposition_schools = get_string('(?<=Opposition Schools )[A-Za-z, ]+', s)
+            spell_profile.opposition_schools = get_csv('(?<=Opposition Schools )[A-Za-z, ]+', s)
             spell_profile.domains = get_csv('((?<=Domains )|(?<=Domain ))[A-Z][A-Za-z, ]+(?=\n)', s)
             spell_profile.bloodline = get_string('(?<=Bloodline )[a-z\(\) ]+', s)
             spell_profile.mystery = get_string('(?<=Mystery )[a-z\(\) ]', s)
@@ -261,7 +262,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
         monster.psychic_magic_concentration = get_integer('((?<=Psychic Magic \(CL \d\w\w; concentration \+)|(?<=Psychic Magic \(CL \d\d\w\w; concentration \+))\d+', buffer)
         # Energy Pool and Abilities
         result = get_psychic_pool_and_abilities(buffer)
-        monster.psychic_energy_pool = result[0]
+        monster.psychic_energy_pool = int(result[0])
         monster.psychic_magic_abilities = split_csv(result[1])
 
     # Spellcasting
