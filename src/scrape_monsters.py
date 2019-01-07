@@ -62,7 +62,7 @@ npc_codex_urls = ['core/barbarian.html', 'core/bard.html', 'core/cleric.html', '
                   'prestige/dragonDisciple.html', 'prestige/duelist.html', 'prestige/eldritchKnight.html', 'prestige/loremaster.html', 'prestige/mysticTheurge.html',
                   'prestige/pathfinderChronicler.html', 'prestige/shadowdancer.html', 'npc/adept.html', 'npc/aristocrat.html', 'npc/commoner.html', 'npc/expert.html', 'npc/warrior.html']
 
-for i in range(4,5):
+for i in range(0,5):
     print('Scraping Beastiary ' + str(i+1))
     print('====================')
     page = urllib2.urlopen(bestiary_urls[i])
