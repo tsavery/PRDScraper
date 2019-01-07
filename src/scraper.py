@@ -160,15 +160,14 @@ def get_spell_like_ability_profiles(buffer, name):
             spell_like_profile.caster_level = get_integer('(?<=Spell-Like Abilities \(CL )\d+', s)
             spell_like_profile.type = get_string('[A-Z][a-z]+(?= Spell-Like Abilities)', s)
             spell_like_profile.concentration = get_integer('((?<=Spell-Like Abilities \(CL \d\w\w; concentration \+)|(?<=Spell-Like Abilities \(CL \d\d\w\w; concentration \+))\d+', s)
-
             # Spell-Like Abiltiies
             spell_like_profile.abilities = get_spells('((?:(?:Constant|\d+\/day|At will|\d+\/week|\d+\/year)—[\d\w \/;,\(\)%\.\'-\+]+\n))+', s)
 
             results.append(spell_like_profile)
     else:
         results.append(False)
-
     return results
+    
 def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, source):
     monster = Monster(name, cr)
 
