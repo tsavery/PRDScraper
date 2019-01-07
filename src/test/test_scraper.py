@@ -68,42 +68,67 @@ Environment any (Hell)
 Organization solitary
 Treasure standard"""
 
-    def test_get_string(self):
-        self.assertEqual(scraper.get_string('Foo', 'FooBar'), 'Foo')
+    def test_get_string_success(self):
         self.assertEqual(scraper.get_string('\w+', 'FooBar'), 'FooBar')
+
+    def test_get_string_failure(self):
         self.assertEqual(scraper.get_string('\d+', 'FooBar'), '')
 
-    def test_get_integer(self):
+    def test_get_integer_success(self):
         self.assertEqual(scraper.get_integer('\d+', 'ABC45FGH'), 45)
+
+    def test_get_integer_failure(self):
         self.assertEqual(scraper.get_integer('\d+', 'ABCDEFGH'), 0)
 
-    def test_get_signed_integer(self):
+    def test_get_signed_integer_positive(self):
         self.assertEqual(scraper.get_signed_integer('.\d+', 'Init +4'), 4)
+
+    def test_get_signed_integer_negative(self):
         self.assertEqual(scraper.get_signed_integer('.\d+', 'Init -4'), -4)
+
+    def test_get_signed_integer_failure(self):
         self.assertEqual(scraper.get_signed_integer('.\d+', 'ABCDEF'), 0)
 
-    def test_split_csv(self):
+    def test_split_csv_multiple(self):
         self.assertEqual(scraper.split_csv('oranges, apples(12, red), bananas'), ['oranges', 'apples(12, red)', 'bananas'])
+
+    def test_split_csv_single(self):
         self.assertEqual(scraper.split_csv('apples(12, red)'), ['apples(12, red)'])
 
-    def test_get_csv(self):
+    def test_get_csv_success(self):
         self.assertEqual(scraper.get_csv('(?<=Feats ).+', 'Feats One, Two, Three(Four, Five)'), ['One', 'Two', 'Three(Four, Five)'])
+
+    def test_get_csv_failure(self):
         self.assertEqual(scraper.get_csv('(?<=Feats ).+', 'Skills One, Two, Three(Four, Five)'), [])
 
-    def test_get_language_special_rules(self):
+    def test_get_language_special_rules_multiple(self):
         self.assertEqual(scraper.get_language_special_rules('Languages Common, Sylvan; telepathy 100 ft., speak with animals'), ['telepathy 100 ft.', 'speak with animals'])
+
+    def test_get_language_special_rules_single(self):
         self.assertEqual(scraper.get_language_special_rules('Languages Common, Sylvan; telepathy 100 ft.'), ['telepathy 100 ft.'])
+
+    def test_get_language_special_rules_failure(self):
         self.assertEqual(scraper.get_language_special_rules('Languages Common, Sylvan'), [])
 
-    def test_get_class_line(self):
+    def test_get_class_line_simple(self):
         self.assertEqual(scraper.get_class_line('\nAasimar cleric 1\n'), 'Aasimar cleric 1')
+
+    def test_get_class_line_multiple_word(self):
         self.assertEqual(scraper.get_class_line('\nHuman animal lord ranger 10\n'), 'Human animal lord ranger 10')
+
+    def test_get_class_line_multiline(self):
         self.assertEqual(scraper.get_class_line('\nHalfling bard 5\nDruid 4\nMystic theurge 4\n'), 'Halfling bard 5/druid 4/mystic theurge 4')
+
+    def test_get_class_line_dash_format(self):
         self.assertEqual(scraper.get_class_line('\nBugbear ninja 5/shadowdancer 4\n'), 'Bugbear ninja 5/shadowdancer 4')
 
-    def test_get_psychic_pool_and_abilities(self):
+    def test_get_psychic_pool_and_abilities_normal(self):
         self.assertEqual(scraper.get_psychic_pool_and_abilities('20 PE—one (3 PE), two(2 PE, DC 17), three (5 PE), four (4 PE, DC 9)'), ['20', 'one (3 PE), two(2 PE, DC 17), three (5 PE), four (4 PE, DC 9)'])
+
+    def test_get_psychic_pool_and_abilities_extra_space(self):
         self.assertEqual(scraper.get_psychic_pool_and_abilities('20 PE —one (3 PE), two(2 PE, DC 17), three (5 PE), four (4 PE, DC 9)'), ['20', 'one (3 PE), two(2 PE, DC 17), three (5 PE), four (4 PE, DC 9)'])
+
+    def test_get_psychic_pool_and_abilities_whelp_magic(self):
         self.assertEqual(scraper.get_psychic_pool_and_abilities('0 PE (see whelp magic)—one (3 PE), two(2 PE, DC 17), three (5 PE), four (4 PE, DC 9)'), ['0', 'one (3 PE), two(2 PE, DC 17), three (5 PE), four (4 PE, DC 9)'])
 
     def test_get_spells(self):
@@ -271,10 +296,13 @@ Treasure standard"""
         self.assertEqual(monster.tactics_before_combat, 'The mystic theurge casts bull\'s strength.')
         self.assertEqual(monster.tactics_base_statistics, 'Without bull\'s strength, the mystic theurge\'s statistics are Melee +1 spear +11 (1d8+5/×3).')
 
-        self.assertEqual(len(spellprofiles), 1)
+        self.assertEqual(len(spellprofiles), 2)
+        self.assertIsInstance(spellprofiles[0], SpellProfile)
         self.assertIsInstance(spellprofiles[1], SpellProfile)
-        self.assertEqual(len(spellprofiles), 1)
-        self.assertIsInstance(spellprofiles[1], SpellProfile)
-        
+        self.assertEqual(len(spelllikeprofiles), 3)
+        self.assertIsInstance(spelllikeprofiles[0], SpellLikeProfile)
+        self.assertIsInstance(spelllikeprofiles[1], SpellLikeProfile)
+        self.assertIsInstance(spelllikeprofiles[2], SpellLikeProfile)
+
 if __name__ == '__main__':
     unittest.main()
