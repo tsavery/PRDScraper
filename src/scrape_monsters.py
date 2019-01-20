@@ -87,13 +87,13 @@ for i in range(0,5):
         scrape_page(bestiary_base_urls[i] + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Bestiary " + str(i+1))
 
     # Dump Data to Json File
-    filename = "..\\output\\monsters\\bestiary" + str(i+1) + ".json"
+    filename = "../output/monsters/bestiary" + str(i+1) + ".json"
     utils.save_json(monsters, filename)
 
-    filename = "..\\output\\monsters\\bestiary" + str(i+1) + "_spells.json"
+    filename = "../output/monsters/bestiary" + str(i+1) + "_spells.json"
     utils.save_json(spell_profiles, filename)
 
-    filename = "..\\output\\monsters\\bestiary" + str(i+1) + "_spelllikeabilities.json"
+    filename = "../output/monsters/bestiary" + str(i+1) + "_spelllikeabilities.json"
     utils.save_json(spell_like_profiles, filename)
 
 monsters = []
@@ -104,13 +104,13 @@ for y in monster_codex_urls:
     scrape_page(monster_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Monster Codex")
 
 # Dump Data to Json File
-filename = "..\\output\\monsters\\monsterCodex.json"
+filename = "../output/monsters/monsterCodex.json"
 utils.save_json(monsters, filename)
 
-filename = "..\\output\\monsters\\monsterCodex_spells.json"
+filename = "../output/monsters/monsterCodex_spells.json"
 utils.save_json(spell_profiles, filename)
 
-filename = "..\\output\\monsters\\monsterCodex_spelllikeabilities.json"
+filename = "../output/monsters/monsterCodex_spelllikeabilities.json"
 utils.save_json(spell_like_profiles, filename)
 
 monsters = []
@@ -121,11 +121,11 @@ for y in npc_codex_urls:
     scrape_page(npc_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG NPC Codex")
 
 # Dump Data to Json File
-filename = "..\\output\\monsters\\npcCodex.json"
+filename = "../output/monsters/npcCodex.json"
 utils.save_json(monsters, filename)
 
-filename = "..\\output\\monsters\\npcCodex_spells.json"
+filename = "../output/monsters/npcCodex_spells.json"
 utils.save_json(spell_profiles, filename)
 
-filename = "..\\output\\monsters\\npcCodex_spelllikeabilities.json"
+filename = "../output/monsters/npcCodex_spelllikeabilities.json"
 utils.save_json(spell_like_profiles, filename)
