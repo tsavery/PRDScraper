@@ -5,10 +5,14 @@ import urllib2
 import re
 import utils
 import scraper
+import argparse
 from monster import Monster
 from spellprofile import SpellProfile
 from spelllikeprofile import SpellLikeProfile
 from bs4 import BeautifulSoup
+
+class A(object):
+    pass
 
 def scrape_page(url, monsters, spell_profiles, spell_like_profiles, source):
     if "phantomArmor.html" in y:
@@ -62,70 +66,81 @@ npc_codex_urls = ['core/barbarian.html', 'core/bard.html', 'core/cleric.html', '
                   'prestige/dragonDisciple.html', 'prestige/duelist.html', 'prestige/eldritchKnight.html', 'prestige/loremaster.html', 'prestige/mysticTheurge.html',
                   'prestige/pathfinderChronicler.html', 'prestige/shadowdancer.html', 'npc/adept.html', 'npc/aristocrat.html', 'npc/commoner.html', 'npc/expert.html', 'npc/warrior.html']
 
-for i in range(0,5):
-    print('Scraping Beastiary ' + str(i+1))
-    print('====================')
-    page = urllib2.urlopen(bestiary_urls[i])
-    soup = BeautifulSoup(page, 'html.parser')
-    body = soup.find('div', class_='body')
+a = A()
 
-    # remove tags from hyperlinks
-    links = []
-    for a in body('a'):
-        leftsideonly = a.get('href').split('#')
-        if "../openGameLicense.html" not in leftsideonly[0]:
-            links.append(leftsideonly[0])
+parser = argparse.ArgumentParser(description='Retrieves monster information from the Paizo Pathfinder Reference Document in .json format.')
+parser.add_argument('-b', action='store_true')
+parser.add_argument('-m', action='store_true')
+parser.add_argument('-n', action='store_true')
 
-    # remove duplicates
-    links = list(set(links))
-    links.sort()
-    links.pop(0)
+parser.parse_args(namespace=a)
+
+if a.b:
+    for i in range(0,5):
+        print('Scraping Beastiary ' + str(i+1))
+        print('====================')
+        page = urllib2.urlopen(bestiary_urls[i])
+        soup = BeautifulSoup(page, 'html.parser')
+        body = soup.find('div', class_='body')
+
+        # remove tags from hyperlinks
+        links = []
+        for a in body('a'):
+            leftsideonly = a.get('href').split('#')
+            if "../openGameLicense.html" not in leftsideonly[0]:
+                links.append(leftsideonly[0])
+
+        # remove duplicates
+        links = list(set(links))
+        links.sort()
+        links.pop(0)
+        monsters = []
+        spell_profiles = []
+        spell_like_profiles = []
+        for y in links:
+            scrape_page(bestiary_base_urls[i] + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Bestiary " + str(i+1))
+
+        # Dump Data to Json File
+        filename = "../output/monsters/bestiary" + str(i+1) + ".json"
+        utils.save_json(monsters, filename)
+
+        filename = "../output/monsters/bestiary" + str(i+1) + "_spells.json"
+        utils.save_json(spell_profiles, filename)
+
+        filename = "../output/monsters/bestiary" + str(i+1) + "_spelllikeabilities.json"
+        utils.save_json(spell_like_profiles, filename)
+if a.m:
     monsters = []
     spell_profiles = []
     spell_like_profiles = []
-    for y in links:
-        scrape_page(bestiary_base_urls[i] + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Bestiary " + str(i+1))
+    print("Scraping Monster Codex")
+    for y in monster_codex_urls:
+        scrape_page(monster_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Monster Codex")
 
     # Dump Data to Json File
-    filename = "../output/monsters/bestiary" + str(i+1) + ".json"
+    filename = "../output/monsters/monsterCodex.json"
     utils.save_json(monsters, filename)
 
-    filename = "../output/monsters/bestiary" + str(i+1) + "_spells.json"
+    filename = "../output/monsters/monsterCodex_spells.json"
     utils.save_json(spell_profiles, filename)
 
-    filename = "../output/monsters/bestiary" + str(i+1) + "_spelllikeabilities.json"
+    filename = "../output/monsters/monsterCodex_spelllikeabilities.json"
     utils.save_json(spell_like_profiles, filename)
 
-monsters = []
-spell_profiles = []
-spell_like_profiles = []
-print("Scraping Monster Codex")
-for y in monster_codex_urls:
-    scrape_page(monster_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Monster Codex")
+if a.n:
+    monsters = []
+    spell_profiles = []
+    spell_like_profiles = []
+    print("Scraping NPC Codex")
+    for y in npc_codex_urls:
+        scrape_page(npc_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG NPC Codex")
 
-# Dump Data to Json File
-filename = "../output/monsters/monsterCodex.json"
-utils.save_json(monsters, filename)
+    # Dump Data to Json File
+    filename = "../output/monsters/npcCodex.json"
+    utils.save_json(monsters, filename)
 
-filename = "../output/monsters/monsterCodex_spells.json"
-utils.save_json(spell_profiles, filename)
+    filename = "../output/monsters/npcCodex_spells.json"
+    utils.save_json(spell_profiles, filename)
 
-filename = "../output/monsters/monsterCodex_spelllikeabilities.json"
-utils.save_json(spell_like_profiles, filename)
-
-monsters = []
-spell_profiles = []
-spell_like_profiles = []
-print("Scraping NPC Codex")
-for y in npc_codex_urls:
-    scrape_page(npc_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG NPC Codex")
-
-# Dump Data to Json File
-filename = "../output/monsters/npcCodex.json"
-utils.save_json(monsters, filename)
-
-filename = "../output/monsters/npcCodex_spells.json"
-utils.save_json(spell_profiles, filename)
-
-filename = "../output/monsters/npcCodex_spelllikeabilities.json"
-utils.save_json(spell_like_profiles, filename)
+    filename = "../output/monsters/npcCodex_spelllikeabilities.json"
+    utils.save_json(spell_like_profiles, filename)

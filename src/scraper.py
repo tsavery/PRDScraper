@@ -68,7 +68,7 @@ def get_class_line(buffer):
     matches = regex.findall(buffer)
     if len(matches) is 1:
         result = matches[0]
-        if 'speed' not in result and 'Resist' not in result:
+        if 'Speed' not in result and 'Resist' not in result:
             return result
         else:
             return ''
@@ -76,7 +76,7 @@ def get_class_line(buffer):
         result = matches[0]
         for s in range(1, len(matches)):
             result += '/' + matches[s].lower()
-        if 'speed' not in result and 'Resist' not in result:
+        if 'Speed' not in result and 'Resist' not in result:
             return result
         else:
             return ''
@@ -167,7 +167,7 @@ def get_spell_like_ability_profiles(buffer, name):
     else:
         results.append(False)
     return results
-    
+
 def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, source):
     monster = Monster(name, cr)
 
