@@ -68,15 +68,17 @@ def get_class_line(buffer):
     matches = regex.findall(buffer)
     if len(matches) is 1:
         result = matches[0]
-        if 'Speed' not in result and 'Resist' not in result:
+        if 'Speed' not in result and 'Resist' not in result and 'speed' not in result and 'resist' not in result:
             return result
         else:
             return ''
     elif len(matches) > 1:
         result = matches[0]
         for s in range(1, len(matches)):
-            result += '/' + matches[s].lower()
-        if 'Speed' not in result and 'Resist' not in result:
+            if 'Speed' not in matches[s] and 'Resist' not in matches[s] and 'speed' not in matches[s] and 'resist' not in matches[s]:
+                result += '/' + matches[s].lower()
+
+        if 'Speed' not in result and 'Resist' not in result and 'speed' not in result and 'resist' not in result:
             return result
         else:
             return ''
