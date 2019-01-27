@@ -14,13 +14,6 @@ from bs4 import BeautifulSoup
 class A(object):
     pass
 
-def visible(element):
-    if element.parent.name in ['style', 'script', '[document]', 'head', 'title']:
-        return False
-    elif re.match('<!--.*-->', str(element.encode('utf-8'))):
-        return False
-    return True
-
 def scrape_page(url, monsters, spell_profiles, spell_like_profiles, special_rules, page, source):
     if "phantomArmor.html" in y:
         return
