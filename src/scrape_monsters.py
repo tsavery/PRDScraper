@@ -14,13 +14,21 @@ from bs4 import BeautifulSoup
 class A(object):
     pass
 
-def scrape_page(url, monsters, spell_profiles, spell_like_profiles, source):
+def visible(element):
+    if element.parent.name in ['style', 'script', '[document]', 'head', 'title']:
+        return False
+    elif re.match('<!--.*-->', str(element.encode('utf-8'))):
+        return False
+    return True
+
+def scrape_page(url, monsters, spell_profiles, spell_like_profiles, special_rules, page, source):
     if "phantomArmor.html" in y:
         return
     print('scraping ' + y + '...')
     print('====================')
     monsterpage = urllib2.urlopen(url)
     monstersoup = BeautifulSoup(monsterpage, 'html.parser')
+    body = monstersoup.find('div', class_='body')
 
     for x in monstersoup.find_all('p', class_='stat-block-title'):
         if "CR" not in x.get_text() or "Trap" in x.get_text():
@@ -51,7 +59,15 @@ def scrape_page(url, monsters, spell_profiles, spell_like_profiles, source):
                 break
 
             print('\t' + name.encode('utf-8') + ' CR ' + cr.encode('utf-8'))
-            scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, source)
+            scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, page, source)
+
+    buffer = ""
+    data = body.find_all("p")
+
+    for x in data:
+        buffer += x.get_text() + '\n'
+
+    scraper.scrape_special_rules(special_rules, buffer, False, page, source)
 # urls
 bestiary_urls = ['http://legacy.aonprd.com/bestiary/monsterIndex.html', 'http://legacy.aonprd.com/bestiary2/additionalMonsterIndex.html',
                  'http://legacy.aonprd.com/bestiary3/monsterIndex.html', 'http://legacy.aonprd.com/bestiary4/monsterIndex.html', 'http://legacy.aonprd.com/bestiary5/index.html']
@@ -97,8 +113,10 @@ if a.b:
         monsters = []
         spell_profiles = []
         spell_like_profiles = []
+        special_rules = []
+
         for y in links:
-            scrape_page(bestiary_base_urls[i] + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Bestiary " + str(i+1))
+            scrape_page(bestiary_base_urls[i] + y, monsters, spell_profiles, spell_like_profiles, special_rules, y,"Pathfinder RPG Bestiary " + str(i+1))
 
         # Dump Data to Json File
         filename = "../output/monsters/bestiary" + str(i+1) + ".json"
@@ -109,13 +127,18 @@ if a.b:
 
         filename = "../output/monsters/bestiary" + str(i+1) + "_spelllikeabilities.json"
         utils.save_json(spell_like_profiles, filename)
+
+        filename = "../output/monsters/bestiary" + str(i+1) + "_specialrules.json"
+        utils.save_json(special_rules, filename)
 if a.m:
     monsters = []
     spell_profiles = []
     spell_like_profiles = []
+    special_rules = []
+
     print("Scraping Monster Codex")
     for y in monster_codex_urls:
-        scrape_page(monster_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG Monster Codex")
+        scrape_page(monster_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, special_rules, y, "Pathfinder RPG Monster Codex")
 
     # Dump Data to Json File
     filename = "../output/monsters/monsterCodex.json"
@@ -127,13 +150,18 @@ if a.m:
     filename = "../output/monsters/monsterCodex_spelllikeabilities.json"
     utils.save_json(spell_like_profiles, filename)
 
+    filename = "../output/monsters/monsterCodex_specialrules.json"
+    utils.save_json(special_rules, filename)
+
 if a.n:
     monsters = []
     spell_profiles = []
     spell_like_profiles = []
+    special_rules = []
+
     print("Scraping NPC Codex")
     for y in npc_codex_urls:
-        scrape_page(npc_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, "Pathfinder RPG NPC Codex")
+        scrape_page(npc_codex_url_base + y, monsters, spell_profiles, spell_like_profiles, special_rules, y, "Pathfinder RPG NPC Codex")
 
     # Dump Data to Json File
     filename = "../output/monsters/npcCodex.json"

@@ -13,6 +13,7 @@ def remove_trailing_and_leading_spaces(value):
 
 def replace_unicode_characters(value):
     value = value.replace('\u2013', '-')
+    value = value.replace('\u2014', '-')
     value = value.replace('\u00d7','x')
     value = value.replace('\t', '')
 

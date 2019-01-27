@@ -58,6 +58,7 @@ class Monster(object):
         self.environment = ""
         self.organization = ""
         self.treasure = ""
+        self.page = ""
         self.source = ""
         self.combat_gear = []
         self.tactics_during_combat = ""

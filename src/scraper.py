@@ -6,6 +6,7 @@ import utils
 from monster import Monster
 from spellprofile import SpellProfile
 from spelllikeprofile import SpellLikeProfile
+from specialrule import SpecialRule
 from collections import OrderedDict
 
 def get_string(str, buffer):
@@ -120,7 +121,7 @@ def get_spells(str, buffer):
 
     return spells
 
-def get_spell_casting_profiles(buffer, name):
+def get_spell_casting_profiles(buffer, name, source):
     regex = re.compile('.+\n(?:(?:\d[strdthn]{2} \(\d{1,2}\/day\)|0 \(at will\)|\d[strdthn]{2}|0|\d[strdthn]{2} \(\d+\))(?:—[\d\w -+;,\(\)%\.\'\/]+\n))+(?:(?:D |Bloodline [a-z]|Opposition Schools [a-z]|Patron [a-z]|Mystery [a-z]| Domain [a-z]| Domains [a-z])[\*\d\w\(\) ;,]+\n){0,1}')
     matches = regex.findall(buffer)
     results = []
@@ -143,13 +144,16 @@ def get_spell_casting_profiles(buffer, name):
             spell_profile.mystery = get_string('(?<=Mystery )[a-z\(\) ]', s)
             spell_profile.patron = get_string('(?<=Patron )[a-z\(\) ]+', s)
 
+            # Source
+            spell_profile.source = source
+
             results.append(spell_profile)
     else:
         results.append(False)
 
     return results
 
-def get_spell_like_ability_profiles(buffer, name):
+def get_spell_like_ability_profiles(buffer, name, source):
     regex = re.compile('.+\n(?:(?:(?:Constant|\d+\/day|At will|\d+\/week|\d+\/year)—[\d\w \/;,\(\)%\.\'-\+]+\n))+')
     matches = regex.findall(buffer)
     results = []
@@ -162,15 +166,19 @@ def get_spell_like_ability_profiles(buffer, name):
             spell_like_profile.caster_level = get_integer('(?<=Spell-Like Abilities \(CL )\d+', s)
             spell_like_profile.type = get_string('[A-Z][a-z]+(?= Spell-Like Abilities)', s)
             spell_like_profile.concentration = get_integer('((?<=Spell-Like Abilities \(CL \d\w\w; concentration \+)|(?<=Spell-Like Abilities \(CL \d\d\w\w; concentration \+))\d+', s)
+
             # Spell-Like Abiltiies
             spell_like_profile.abilities = get_spells('((?:(?:Constant|\d+\/day|At will|\d+\/week|\d+\/year)—[\d\w \/;,\(\)%\.\'-\+]+\n))+', s)
+
+            # Source
+            spell_like_profile.source = source
 
             results.append(spell_like_profile)
     else:
         results.append(False)
     return results
 
-def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, source):
+def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, page, source):
     monster = Monster(name, cr)
 
     ## General
@@ -267,14 +275,14 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
         monster.psychic_magic_abilities = split_csv(result[1])
 
     # Spellcasting
-    result = get_spell_casting_profiles(buffer, monster.name)
+    result = get_spell_casting_profiles(buffer, monster.name, source)
     monster.spellcaster = result[0]
     if monster.spellcaster is True:
         for s in range(1, len(result)):
             spell_profiles.append(result[s])
 
     # Spell-Like Abilities
-    result = get_spell_like_ability_profiles(buffer, monster.name)
+    result = get_spell_like_ability_profiles(buffer, monster.name, source)
     monster.spell_like_abilities = result[0]
     if monster.spell_like_abilities is True:
         for s in range(1, len(result)):
@@ -287,5 +295,20 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     monster.combat_gear = get_csv('(?<=Combat Gear ).+', buffer)
 
     # Add Source
+    monster.page = page
     monster.source = source
     monsters.append(monster)
+
+def scrape_special_rules(special_rules, buffer, universal, page, source):
+    regex = re.compile('(?:[\w.()-]+ )+\((?:Su|Ex|Sp)\):* .+')
+    matches = regex.findall(buffer)
+
+    for s in matches:
+        special_rule = SpecialRule(page)
+        special_rule.name = get_string('.+(?= \((?:Su|Ex|Sp)\))', s)
+        special_rule.type = get_string('(?:Su|Ex|Sp)', s)
+        special_rule.text = get_string('((?<=\((?:Su|Ex|Sp)\) )|(?<=\((?:Su|Ex|Sp)\): )).+', s)
+        special_rule.source = source
+        special_rule.universal = universal
+
+        special_rules.append(special_rule)

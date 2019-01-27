@@ -13,6 +13,7 @@ class SpellProfile(object):
         self.bloodline = ""
         self.patron = ""
         self.mystery = ""
+        self.source = ""
 
     def __getattr__(self, name):
         try:
