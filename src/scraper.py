@@ -113,10 +113,10 @@ def get_spells(str, buffer):
     match = regex.search(buffer)
     spells = OrderedDict()
     if match:
-        lines = match.group().decode('utf-8').split('\n')
+        lines = match.group().split('\n')
         for line in lines:
             if line != '':
-                val = line.split('—'.decode('utf-8'))
+                val = line.split('—')
                 spells[val[0]] = split_csv(val[1])
 
     return spells
@@ -233,12 +233,12 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
 
     ##Statistics
     # Ability Scores
-    monster.strength = get_integer('(?<=Str )\d+', buffer)
-    monster.dexterity = get_integer('(?<=Dex )\d+', buffer)
-    monster.constitution = get_integer('(?<=Con )\d+', buffer)
-    monster.intelligence = get_integer('(?<=Int )\d+', buffer)
-    monster.wisdom = get_integer('(?<=Wis )\d+', buffer)
-    monster.charisma = get_integer('(?<=Cha )\d+', buffer)
+    monster.strength = get_integer('(?<=\nStr )\d+', buffer)
+    monster.dexterity = get_integer('(?<=, Dex )\d+', buffer)
+    monster.constitution = get_integer('(?<=, Con )\d+', buffer)
+    monster.intelligence = get_integer('(?<=, Int )\d+', buffer)
+    monster.wisdom = get_integer('(?<=, Wis )\d+', buffer)
+    monster.charisma = get_integer('(?<=, Cha )\d+', buffer)
     # Base Attack Bonus
     monster.base_attack_bonus = get_integer('(?<=Base Atk \+)\d+', buffer)
     # Combat Maneuver Bonus & Defense
@@ -260,7 +260,7 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     monster.treasure = get_string('(?<=Treasure ).+', buffer)
 
     # Encode the buffer for spellcasting checks
-    buffer = buffer.encode('utf-8')
+    buffer = buffer
 
     ## Spellcasting, Spell-Like Abilities and Psychic Magic
     # Psychic Magic
@@ -293,6 +293,8 @@ def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profil
     monster.tactics_during_combat = get_string('(?<=During Combat ).+', buffer)
     monster.tactics_base_statistics = get_string('(?<=Base Statistics ).+', buffer)
     monster.combat_gear = get_csv('(?<=Combat Gear ).+', buffer)
+
+    monster.boon = get_string('(?<=Boon ).+', buffer)
 
     # Add Source
     monster.page = page

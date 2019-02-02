@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # import libraries
-import urllib2
+import urllib.request
 import re
 import utils
 import scraper
@@ -19,7 +19,7 @@ def scrape_page(url, monsters, spell_profiles, spell_like_profiles, special_rule
         return
     print('scraping ' + y + '...')
     print('====================')
-    monsterpage = urllib2.urlopen(url)
+    monsterpage = urllib.request.urlopen(url)
     monstersoup = BeautifulSoup(monsterpage, 'html.parser')
     body = monstersoup.find('div', class_='body')
 
@@ -28,31 +28,30 @@ def scrape_page(url, monsters, spell_profiles, spell_like_profiles, special_rule
             continue
         name = ""
         cr = 0
-        if x.b and x.b.find('span', class_='stat-block-cr') or x.find('span', class_='stat-block-cr'):
-            if(x.b):
-                pair = x.b.get_text().split('CR')
-            else:
-                pair = x.get_text().split('CR')
-            name = utils.remove_trailing_and_leading_spaces(pair[0])
+        if(x.b):
+            pair = x.b.get_text().split('CR')
+        else:
+            pair = x.get_text().split('CR')
+        name = utils.remove_trailing_and_leading_spaces(pair[0])
 
-            cr = utils.remove_trailing_and_leading_spaces(pair[1])
+        cr = utils.remove_trailing_and_leading_spaces(pair[1])
 
-            currentElement = x
+        currentElement = x
 
-            # get all the content for the stat block as plain text
-            buffer = ""
-            lines = 0
-            while currentElement.get('class'):
-                if 'stat-block-title' in currentElement.get('class') and lines > 0:
-                    break
-                currentElement = currentElement.find_next('p')
-                buffer += currentElement.get_text() + "\n"
-                lines += 1
-            if lines < 5:
+        # get all the content for the stat block as plain text
+        buffer = ""
+        lines = 0
+        while currentElement.get('class'):
+            if 'stat-block-title' in currentElement.get('class') and lines > 0:
                 break
+            currentElement = currentElement.find_next('p')
+            buffer += currentElement.get_text() + "\n"
+            lines += 1
+        if lines < 5:
+            break
 
-            print('\t' + name.encode('utf-8') + ' CR ' + cr.encode('utf-8'))
-            scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, page, source)
+        print('\t'.encode('utf-8') + name.encode('utf-8') + ' CR '.encode('utf-8') + cr.encode('utf-8'))
+        scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, page, source)
 
     buffer = ""
     data = body.find_all("p")
@@ -74,13 +73,18 @@ npc_codex_urls = ['core/barbarian.html', 'core/bard.html', 'core/cleric.html', '
                   'core/rogue.html', 'core/sorcerer.html', 'core/wizard.html', 'prestige/arcaneArcher.html', 'prestige/arcaneTrickster.html', 'prestige/assassin.html',
                   'prestige/dragonDisciple.html', 'prestige/duelist.html', 'prestige/eldritchKnight.html', 'prestige/loremaster.html', 'prestige/mysticTheurge.html',
                   'prestige/pathfinderChronicler.html', 'prestige/shadowdancer.html', 'npc/adept.html', 'npc/aristocrat.html', 'npc/commoner.html', 'npc/expert.html', 'npc/warrior.html']
-
+gmg_base = 'http://legacy.aonprd.com/gameMasteryGuide/npcs/'
+gmg_urls = ['crusaders.html', 'military.html', 'villagers.html', 'temple.html', 'brigands.html', 'tavern.html', 'criminalsI.html', 'sailors.html', 'street.html', 'tribe.html', 'mercenaries.html', 'seers.html',
+            'cityWatch.html', 'fightingSchool.html', 'merchants.html', 'entertainers.html', 'road.html', 'heretics.html', 'dungeon.html', 'criminalsII.html', 'frontier.html', 'scholars.html', 'adventurers.html',
+            'coliseum.html', 'marauders.html', 'royalty.html', 'nobles.html']
 a = A()
 
 parser = argparse.ArgumentParser(description='Retrieves monster information from the Paizo Pathfinder Reference Document in .json format.')
 parser.add_argument('-b', action='store_true')
 parser.add_argument('-m', action='store_true')
 parser.add_argument('-n', action='store_true')
+parser.add_argument('-g', action='store_true')
+
 
 parser.parse_args(namespace=a)
 
@@ -88,7 +92,7 @@ if a.b:
     for i in range(0,5):
         print('Scraping Beastiary ' + str(i+1))
         print('====================')
-        page = urllib2.urlopen(bestiary_urls[i])
+        page = urllib.request.urlopen(bestiary_urls[i])
         soup = BeautifulSoup(page, 'html.parser')
         body = soup.find('div', class_='body')
 
@@ -164,4 +168,24 @@ if a.n:
     utils.save_json(spell_profiles, filename)
 
     filename = "../output/monsters/npcCodex_spelllikeabilities.json"
+    utils.save_json(spell_like_profiles, filename)
+
+if a.g:
+    monsters = []
+    spell_profiles = []
+    spell_like_profiles = []
+    special_rules = []
+
+    print("Scraping GMG")
+    for y in gmg_urls:
+        scrape_page(gmg_base + y, monsters, spell_profiles, spell_like_profiles, special_rules, y, "Pathfinder RPG GameMastery Guide")
+
+    # Dump Data to Json File
+    filename = "../output/monsters/gmg.json"
+    utils.save_json(monsters, filename)
+
+    filename = "../output/monsters/gmg_spells.json"
+    utils.save_json(spell_profiles, filename)
+
+    filename = "../output/monsters/gmg_spelllikeabilities.json"
     utils.save_json(spell_like_profiles, filename)

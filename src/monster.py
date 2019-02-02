@@ -64,6 +64,7 @@ class Monster(object):
         self.tactics_during_combat = ""
         self.tactics_before_combat = ""
         self.tactics_base_statistics = ""
+        self.boon = ""
 
     def __getattr__(self, name):
         try:
