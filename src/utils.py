@@ -12,10 +12,11 @@ def remove_trailing_and_leading_spaces(value):
     return value
 
 def replace_unicode_characters(value):
-    value = value.replace('\u2013', '-')
-    value = value.replace('\u2014', '-')
-    value = value.replace('\u00d7','x')
-    value = value.replace('\t', '')
+    value.encode('utf-8')
+    value = value.replace('\\u2013', u'-')
+    value = value.replace('\\u2014', u'-')
+    value = value.replace('\\u00d7', u'x')
+    value = value.replace('\\t', u'')
 
     return value
 
