@@ -178,8 +178,12 @@ def get_spell_like_ability_profiles(buffer, name, source):
         results.append(False)
     return results
 
-def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, page, source):
+def scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, page, source, flavor_text, description):
     monster = Monster(name, cr)
+
+    ##Flavor Text and Description
+    monster.flavor_text = flavor_text
+    monster.description = description
 
     ## General
     #Typeline

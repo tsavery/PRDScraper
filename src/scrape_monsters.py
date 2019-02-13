@@ -37,9 +37,15 @@ def scrape_page(url, monsters, spell_profiles, spell_like_profiles, special_rule
         cr = utils.remove_trailing_and_leading_spaces(pair[1])
 
         currentElement = x
+        flavor_text = ""
+        if x.find_previous('p', class_='flavor-text'):
+            flavorNode = x.find_previous('p')
+
+            if flavorNode.get('class') and 'flavor-text' in flavorNode['class']:
+                flavor_text = flavorNode.get_text()
 
         # get all the content for the stat block as plain text
-        buffer = ""
+        buffer = ''
         lines = 0
         while currentElement.get('class'):
             if 'stat-block-title' in currentElement.get('class') and lines > 0:
@@ -50,8 +56,16 @@ def scrape_page(url, monsters, spell_profiles, spell_like_profiles, special_rule
         if lines < 5:
             break
 
+        description = ''
+        while currentElement.get('class') is None:
+            description += currentElement.get_text() + "|"
+            if currentElement.find_next('p'):
+                currentElement = currentElement.find_next('p')
+            else:
+                break
+
         print('\t'.encode('utf-8') + name.encode('utf-8') + ' CR '.encode('utf-8') + cr.encode('utf-8'))
-        scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, page, source)
+        scraper.scrape_monster(buffer, name, cr, monsters, spell_profiles, spell_like_profiles, page, source, flavor_text, description)
 
     buffer = ""
     data = body.find_all("p")
@@ -60,6 +74,7 @@ def scrape_page(url, monsters, spell_profiles, spell_like_profiles, special_rule
         buffer += x.get_text() + '\n'
 
     scraper.scrape_special_rules(special_rules, buffer, False, page, source)
+
 # urls
 bestiary_urls = ['http://legacy.aonprd.com/bestiary/monsterIndex.html', 'http://legacy.aonprd.com/bestiary2/additionalMonsterIndex.html',
                  'http://legacy.aonprd.com/bestiary3/monsterIndex.html', 'http://legacy.aonprd.com/bestiary4/monsterIndex.html', 'http://legacy.aonprd.com/bestiary5/index.html']

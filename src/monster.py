@@ -5,6 +5,8 @@ class Monster(object):
         self._attrs = OrderedDict()
         self.name = name
         self.cr = cr
+        self.flavor_text = ""
+        self.description = ""
         self.type = ""
         self.classline = ""
         self.init = 0
